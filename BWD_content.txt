@@ -1,0 +1,52 @@
+LÊN https://dribbble.com/ VÀ CÁC TRANG CHIA SẺ TEMPALTE MIỄN PHÍ, ĐẸP ĐỂ XEM VÀ COPY => TỰ DESIGN RẤT XẤU RẤT XẤU RẤT XẤU.
+
+Các chức năng ( bổ sung thêm ):
+- Giới thiệu các nền văn hóa dân tộc: Trang web của bạn có thể cung cấp thông tin chi tiết về các nền văn hóa dân tộc khác nhau, bao gồm cả lịch sử, phong tục, tập quán, văn hóa ẩm thực, đồng phục và trang phục truyền thống, các câu chuyện cổ tích, điệu nhảy truyền thống và nhiều hơn nữa.
+- Thông tin về các sự kiện văn hóa: Trang web của bạn có thể cung cấp thông tin về các sự kiện văn hóa sắp tới, bao gồm các lễ hội, triển lãm, buổi biểu diễn và các hoạt động văn hóa khác. Bạn có thể cập nhật các thông tin mới nhất về các sự kiện này để giúp người dùng có thể dễ dàng tìm được các hoạt động văn hóa tương thích với sở thích của họ.
+=>> có thể đăng nhập và book lịch mua vé.
+- Diễn đàn và phản hồi: Trang web của bạn có thể cung cấp một diễn đàn hoặc chức năng phản hồi cho người dùng, cho phép họ chia sẻ ý kiến ​​và kinh nghiệm của mình liên quan đến các nền văn hóa dân tộc khác nhau. Điều này tạo ra một cộng đồng chia sẻ thông tin và kinh nghiệm giữa những người yêu thích văn hóa dân tộc và giúp bạn tạo nên một trang web phù hợp với sở thích của người dùng.
+- Tư vấn và đặt lịch trình: Trang web của bạn có thể cung cấp tư vấn và đặt lịch trình du lịch cho những ai muốn khám phá các nền văn hóa dân tộc. Bạn có thể đưa ra các gợi ý lịch trình, địa điểm du lịch và các hoạt động liên quan đến các nền văn hóa dân tộc khác nhau, giúp người dùng dễ dàng lên kế hoạch cho chuyến đi của mình.
+- Tích hợp mạng xã hội: Trang web của bạn có thể tích hợp các mạng xã hội để người dùng có thể chia sẻ các trang web hoặc bài viết yêu thích của mình với bạn bè trên mạng xã hội.
+- Hình ảnh và video: Bạn có thể tạo một thư viện hình ảnh và video chất lượng cao về các nền văn hóa dân tộc khác nhau, bao gồm cả các bức ảnh của trang phục truyền thống, đồng phục, cổ tích và các điệu nhảy truyền thống. Điều này giúp người dùng có thể khám phá và tìm hiểu các nền văn hóa dân tộc theo cách trực quan và sinh động nhất.
+- Cửa hàng trực tuyến: Nếu bạn có kế hoạch bán các sản phẩm liên quan đến các nền văn hóa dân tộc, trang web của bạn có thể cung cấp cửa hàng trực tuyến để người dùng có thể mua các sản phẩm như đồ trang trí, quần áo, phụ kiện, đồ thủ công và các sản phẩm khác.
+- Blog và tin tức: Trang web của bạn có thể cung cấp một blog hoặc phần tin tức để cập nhật các thông tin mới nhất về các nền văn hóa dân tộc khác nhau, bao gồm cả các cuộc phỏng vấn với những người có kinh nghiệm trong lĩnh vực này, các bài báo về các sự kiện văn hóa và các hoạt động khác liên quan đến các nền văn hóa dân tộc.
+- Đăng ký tình nguyện viên: Tạo một cộng đồng tình nguyện viên để các bạn trẻ có thể tham gia các hoạt động bảo tồn, giữ gìn và phát triển văn hóa.
+- Tìm kiếm nâng cao: Cung cấp chức năng tìm kiếm nâng cao để khách truy cập có thể tìm kiếm thông tin về các địa điểm di sản văn hóa, các hoạt động văn hóa và du lịch dựa trên các tiêu chí như địa điểm, thể loại, thời gian, v.v.
+
+--primary-key :#2F7C72
+
+#1 : homepage
++ Demo 1 vài featured project
+  - Sliderbar => tầm 6,7 ảnh đặc sắc về văn hóa.
+=>> demo https://dribbble.com/shots/20136790-Travela-Vacation-Booking-Landing-Page?fbclid=IwAR0ASbAcAPMCN33b3XQWLSuUWEVS9T1kdkeZNVoqqmdrEozBlDTcaa96ViU
+
+  - Our collection => vẫn là chi tiết về tất tần tật, hover vào thì phóng to ảnh, bấm vào nút quick view thì thông tin chi tiết được hiện lên, có thể add vào danh sách yêu thích
+=>> demo https://preview.colorlib.com/theme/space/
+
+  - Demo clb + hoạt động thiện nguyện tu sửa, bấm vào có form dki , donate tiền, 
+=>> demo : chưa tìm ra
+
+  - Địa điểm du lịch và các hoạt động liên quan đến các nền văn hóa dân tộc khác nhau, giúp người dùng dễ dàng lên kế hoạch cho chuyến đi của mình =>> người dùng có thể book vé và có lịch trình chi tiết.
+=>> demo: (tiktok + 
+
+
++ Show về các nền văn hóa dân tộc khác nhau, bao gồm cả lịch sử, phong tục, tập quán, văn hóa ẩm thực, đồng phục và trang phục truyền thống, các câu chuyện cổ tích, điệu nhảy truyền thống và nhiều hơn nữa. =>> chia ra nhiều phần xem 
+
+#2 : show page đăng kí -> đăng nhập (tk : nhatquynh)
+
+#3 : (Booking) Địa điểm du lịch và các hoạt động => đưa các lễ hội và lịch trình đang diễn ra =>> bấm vào ra thông tin chi tiết => book vé => phần mua bán thanh toán.
+
+=>>> lên https://dribbble.com tìm template chắp ghép vô.
+	
+#4 : Social medial
+Tích hợp mạng xã hội: Trang web tích hợp các mạng xã hội, trên đó có các bài chia sẻ về ... để người dùng có thể chia sẻ các trang web hoặc bài viết yêu thích của mình với bạn bè trên mạng xã hội.
+
+demo =>> https://dribbble.com/shots/19224855--Creatone-Social-Platform?fbclid=IwAR0qTtLD8W-lyU0_eWDnpph-qGEUgRBoEFdOR8VSBeUF836oPVYNCOq5uKs
+
+  
+#5 : Hoạt động + CLB =>> chưa triển khai ra
+#6 : blog và tin tức 
+demo : https://preview.colorlib.com/theme/cozastore/blog.html
+
+
+=>>>>>>> : responsive -> log out
