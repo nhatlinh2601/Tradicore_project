@@ -95,6 +95,7 @@ function SliderComment() {
 
     return (
         <div className='wrap'>
+            <div className='overlay'></div>
             <div className='container top_content content_top'>
                 <div className='top'>
                     <h1>“Báu vật nhân văn sống”</h1>
