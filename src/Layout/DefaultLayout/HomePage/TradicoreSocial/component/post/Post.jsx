@@ -47,7 +47,9 @@ const Post = ({ post }) => {
                 <div className="postBottomFooter">
                     <div className="postBottomFooterItem">
                         <ThumbUpAltOutlined className="footerIcon" />
-                        <span className="footerText">Like</span>
+                        <span className="footerText" onclick="Click()">
+                            Like
+                        </span>
                     </div>
                     <div className="postBottomFooterItem">
                         <ChatBubbleOutline className="footerIcon" />

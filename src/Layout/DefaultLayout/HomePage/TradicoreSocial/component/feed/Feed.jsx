@@ -2,14 +2,13 @@ import React from 'react';
 import { Posts } from '../../data';
 import Post from '../post/Post';
 import Share from '../share/Share';
-import Story from '../story/Story';
+
 import './feed.scss';
 
 const Feed = () => {
     return (
         <div className="feed">
             <div className="feedWrapper">
-                <Story />
                 <Share />
                 {Posts.map((p) => (
                     <Post key={p.id} post={p} />
