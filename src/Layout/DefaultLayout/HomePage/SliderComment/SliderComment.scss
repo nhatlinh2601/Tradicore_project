@@ -1,10 +1,26 @@
 .wrap {
     color: black;
+    position: relative;
+    background-image: url(./bg-img.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #aee6bf;
+    opacity: 0.8;
 }
 
 .top_content {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .top {
     color: black;
@@ -16,7 +32,7 @@
     color: black;
 }
 .wrapper_content {
-    margin-top: 60px;
+    padding: 60px;
 
     .box {
         display: flex !important;
@@ -30,6 +46,8 @@
 
         p {
             text-align: justify;
+            color: black;
+            //font-weight: 500;
         }
 
         .box_img {
@@ -54,6 +72,7 @@
 
     .wrapper_content {
         margin-top: 0;
+        padding: 0;
     }
 }
 
@@ -61,11 +80,17 @@
     .hide_in_ipad_lg {
         display: none;
     }
+    .wrapper_content {
+        padding: 0;
+    }
 }
 
 @media (max-width: 576px) or (min-width: 992px) {
     .visi_only_ipad {
         display: none;
+    }
+    .wrapper_content {
+        padding: 0;
     }
 }
 

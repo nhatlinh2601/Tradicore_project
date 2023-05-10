@@ -36,7 +36,7 @@ function SectionCore() {
     return (
         <div className='wrap-section_core'>
             <div className='container'>
-                <div className='row'>
+                <div className='row row-center'>
 
                     <div className='col-lg-6'>
                         <div className='left_content'>
@@ -44,7 +44,7 @@ function SectionCore() {
                                 contents.map((item, index) => {
                                     return (
                                         <Link key={index} to='/news'>
-                                            <div className={`content_item ${index === 1 ? 'second-item' : ''}`}>
+                                            <div className={`content_item ${index === 4 || index === 1 ? 'second-item' : ''}`}>
                                                 <div className='item-info'>
                                                     <h3 className='item-title'>
                                                         {item.title}

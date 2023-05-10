@@ -1,0 +1,125 @@
+@import '/src/components/GlobalStyles/variables.scss';
+.footer {
+    background: #222222;
+    color: white;
+}
+
+.footer__content {
+}
+
+.footer__item {
+    margin: 0 15px;
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.footer__item-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.footer__item-list {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__item-link {
+    color: #b2b2b2;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 8px 0;
+    transition: all 0.3s linear;
+}
+
+.footer__item-link:hover {
+    color: $second-color;
+}
+
+.footer__item-link p {
+    margin: 0;
+}
+
+.item__icon {
+    margin: 24px 0;
+    margin-left: -10px;
+}
+
+.item__icon i {
+    margin: 0 10px;
+    color: #b2b2b2;
+    transition: all 0.3s linear;
+}
+
+.item__icon i:hover {
+    cursor: pointer;
+    color: $primary-color;
+}
+
+.item__input-email {
+    width: 100%;
+    padding: 4px 0;
+    margin: 29px 0;
+    outline: none;
+    border: none;
+    background: none;
+    color: #b2b2b2;
+    border-bottom: 2px solid rgba(204, 204, 204, 0.1);
+}
+
+.item__btn-submit {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    background: $primary-color;
+    color: white;
+}
+
+.item__btn-submit:hover {
+    cursor: pointer;
+    background: white;
+    color: $primary-color;
+}
+
+.footer__pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__pay-content {
+    display: flex;
+}
+
+.footer__pay-img {
+    margin: 0 2px;
+}
+
+.footer__pay-img:hover {
+    cursor: pointer;
+}
+
+.footer__slogan {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__slogan p {
+    font-size: 13px;
+    color: #888888;
+    margin: 20px;
+}
+
+.footer__link a {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+@media (max-width: 739px) {
+    .footer__item {
+        padding: 0;
+    }
+}
