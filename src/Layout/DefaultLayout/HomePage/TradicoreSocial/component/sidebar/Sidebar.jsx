@@ -10,18 +10,24 @@ import MenuLink from '../menuLink/MenuLink';
 import Friends from '../friends/Friends';
 import { Users } from '../../data';
 import { DarkModeContext } from './../../context/darkModeContext';
+import Login from '~/pages/Login';
 
 const Sidebar = () => {
+    function logout() {
+        <>
+            <Login />
+        </>;
+    }
     const { dispatch } = useContext(DarkModeContext);
     return (
         <div className="sidebar">
             <div className="sidebarWrapper">
-                <MenuLink Icon={<RssFeedIcon />} text="Feed" />
-                <MenuLink Icon={<ChatIcon />} text="Chats" />
-                <MenuLink Icon={<VideocamIcon />} text="Videos" />
-                <MenuLink Icon={<GroupsIcon />} text="Friends" />
-                <MenuLink Icon={<EventIcon />} text="Events" />
-                <MenuLink Icon={<ExitToAppOutlinedIcon />} text="Logout" />
+                <MenuLink Icon={<RssFeedIcon />} text="Feed"></MenuLink>
+                <MenuLink Icon={<ChatIcon />} text="Chats"></MenuLink>
+                <MenuLink Icon={<VideocamIcon />} text="Videos"></MenuLink>
+                <MenuLink Icon={<GroupsIcon />} text="Friends"></MenuLink>
+                <MenuLink Icon={<EventIcon />} text="Events"></MenuLink>
+                <MenuLink Icon={<ExitToAppOutlinedIcon />} text="Logout"></MenuLink>
 
                 <button className="sidebarButton">Show More</button>
                 <hr className="sidebarHr" />

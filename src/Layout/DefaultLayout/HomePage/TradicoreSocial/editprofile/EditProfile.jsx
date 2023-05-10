@@ -1,7 +1,7 @@
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 import React from 'react';
 import Navbar from '../component/navbar/Navbar';
-import Sidebar from '../../components/sidebar/Sidebar';
+import Sidebar from '../component/sidebar/Sidebar';
 import './editprofile.scss';
 
 const EditProfile = () => {

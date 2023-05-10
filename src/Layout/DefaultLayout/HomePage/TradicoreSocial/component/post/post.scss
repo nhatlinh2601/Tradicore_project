@@ -41,7 +41,7 @@
             .postTopRight {
                 .postVertButton {
                     font-size: 30px;
-                    color: #333;
+                    color: #2f7c72;
                     cursor: pointer;
                 }
             }
@@ -55,6 +55,7 @@
                 max-height: 500px;
                 object-fit: contain;
                 margin-top: 20px;
+                border-radius: 5px;
                 cursor: pointer;
             }
         }
@@ -102,12 +103,14 @@
                 padding: 7px;
                 border-radius: 5px;
                 cursor: pointer;
-                transition: 0.5s;
+
+                transition: all 0.3s ease-in-out;
 
                 .footerIcon {
-                    color: #333;
+                    color: #2f7c72;
                     font-size: 30px;
                     margin-right: 10px;
+                    transition: all 0.3s ease-in-out;
                 }
 
                 .footerText {
@@ -117,7 +120,11 @@
         }
 
         .postBottomFooterItem:hover {
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: #2f7c72;
+            color: #fff;
+        }
+        .postBottomFooterItem:hover .footerIcon {
+            color: #fff;
         }
     }
 }

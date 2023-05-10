@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './post.scss';
 import { Users } from './../../data';
+import { Posts } from './../../data';
 import { IconButton } from '@mui/material';
 import { ChatBubbleOutline, MoreVert, Favorite, ThumbUp, ThumbUpAltOutlined, ShareOutlined } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
+    const LikeButton = () => {
+        const [likeCount, setLikeCount] = useState(50);
+
+        // eslint-disable-next-line no-unused-vars
+        const increaseLike = () => {
+            setLikeCount(+1);
+        };
+    };
+
     console.log(post);
+
     return (
         <div className="post">
             <div className="postWrapper">
@@ -36,7 +47,7 @@ const Post = ({ post }) => {
                     <div className="postBottomLeft">
                         <Favorite className="bottomLeftIcon" style={{ color: 'red' }} />
                         <ThumbUp className="bottomLeftIcon" style={{ color: '#011631' }} />
-                        <span className="postLikeCounter">{post.like}</span>
+                        <span className="postLikeCounter"> {post.like} </span>
                     </div>
                     <div className="postBottomRight">
                         <span className="postCommentText">{post.comment} · comments · share</span>
@@ -45,12 +56,11 @@ const Post = ({ post }) => {
 
                 <hr className="footerHr" />
                 <div className="postBottomFooter">
-                    <div className="postBottomFooterItem">
+                    <span className="postBottomFooterItem" onClick={post.increaseLike}>
                         <ThumbUpAltOutlined className="footerIcon" />
-                        <span className="footerText" onclick="Click()">
-                            Like
-                        </span>
-                    </div>
+                        <span className="footerText">Like</span>
+                    </span>
+
                     <div className="postBottomFooterItem">
                         <ChatBubbleOutline className="footerIcon" />
                         <span className="footerText">Comment</span>

@@ -14,6 +14,7 @@ const Rightbarhome = () => {
                 ))}
             </ul>
 
+            <hr className="rightbarrHr" />
             <span className="rightbarTitle"> Chat</span>
         </div>
     );

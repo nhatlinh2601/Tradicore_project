@@ -1,5 +1,6 @@
 import { Close, EmojiEmotions, PermMedia, VideoCameraFront } from '@mui/icons-material';
 import React, { useState } from 'react';
+import user from 'src/assets/images/img-social/user.jpg';
 import './Share.scss';
 
 const Share = () => {
@@ -12,7 +13,7 @@ const Share = () => {
         <div className="share">
             <div className="shareWrapper">
                 <div className="shareTop">
-                    <img src="/assets/images/img-social/user.jpg" alt="" className="shareProfileImg" />
+                    <img src={user} alt="" className="shareProfileImg" />
                     <input type="text" placeholder="What's on your mind ?" className="shareInput" />
                 </div>
                 <hr className="shareHr" />
@@ -24,10 +25,7 @@ const Share = () => {
                 )}
                 <div className="shareBottom">
                     <div className="shareOptions">
-                        <div className="shareOption">
-                            <VideoCameraFront className="shareIcon" style={{ color: '#bb0000f2' }} />
-                            <span className="shareOptionText">Live Video</span>
-                        </div>
+                        {' '}
                         <label htmlFor="file" className="shareOption">
                             <PermMedia className="shareIcon" style={{ color: '#2e0196f1' }} />
                             <span className="shareOptionText">Photo/Video</span>
@@ -39,10 +37,6 @@ const Share = () => {
                                 onChange={(e) => setFile(e.target.files[0])}
                             />
                         </label>
-                        <div className="shareOption">
-                            <EmojiEmotions className="shareIcon" style={{ color: '#bfc600ec' }} />
-                            <span className="shareOptionText">Feelings/Activity</span>
-                        </div>
                     </div>
                 </div>
             </div>

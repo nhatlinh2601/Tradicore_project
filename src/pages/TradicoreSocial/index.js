@@ -1,10 +1,19 @@
+import React from 'react';
+
 import HomeSocial from '~/Layout/DefaultLayout/HomePage/TradicoreSocial/homeSocial/HomeSocial';
-function TradicoreSocial() {
+import { DarkModeContextProvider } from '~/Layout/DefaultLayout/HomePage/TradicoreSocial/context/darkModeContext';
+
+const TradicoreSocial = () => {
     return (
         <>
-            <HomeSocial />
+            <React.StrictMode>
+                <DarkModeContextProvider>
+                    <HomeSocial />
+                </DarkModeContextProvider>
+            </React.StrictMode>
+            ,
         </>
     );
-}
+};
 
 export default TradicoreSocial;

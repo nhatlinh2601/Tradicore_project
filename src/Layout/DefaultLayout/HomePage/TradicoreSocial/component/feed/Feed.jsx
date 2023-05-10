@@ -2,7 +2,6 @@ import React from 'react';
 import { Posts } from '../../data';
 import Post from '../post/Post';
 import Share from '../share/Share';
-
 import './feed.scss';
 
 const Feed = () => {
