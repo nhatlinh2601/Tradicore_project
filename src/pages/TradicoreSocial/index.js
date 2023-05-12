@@ -1,8 +1,7 @@
-import HomeSocial from "~/Layout/DefaultLayout/TradicoreSocial/homeSocial/HomeSocial";
 function TradicoreSocial() {
     return (
-        <HomeSocial />
+        <h2>TradicoreSocial</h2>
     );
-}
+};
 
 export default TradicoreSocial;
