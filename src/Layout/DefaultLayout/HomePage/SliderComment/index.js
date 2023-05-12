@@ -99,7 +99,7 @@ function SliderComment() {
             <div className='container top_content content_top'>
                 <div className='top'>
                     <h1>“Báu vật nhân văn sống”</h1>
-                    <p>Tôi nhớ trước đây, một vị tiền bối từng nói ... </p>
+                    <p>Di sản cần có sự tiếp nối - Hãy gìn giữ khi còn có thể</p>
                 </div>
             </div>
 

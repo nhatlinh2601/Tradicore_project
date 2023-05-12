@@ -1,4 +1,7 @@
 @import '/src/components/GlobalStyles/variables.scss';
+.wrapperAlb {
+    position: relative;
+}
 .content_top {
     p {
         color: black;
@@ -47,7 +50,7 @@
         font-size: 18px;
         font-weight: 500;
         padding: 8px 24px;
-        transform: translateX(-50%) translateY(80px);
+        transform: translateX(-50%) translateY(125px);
         transition: all 0.4s ease-in-out;
 
         :hover {
@@ -57,11 +60,197 @@
     }
 }
 .image_content:hover .image-link {
-    transform: scale(1.05);
+    transform: scale(1.2);
     cursor: pointer;
     opacity: 0.7;
 }
 
 .image_content:hover .btn-quickView {
     transform: translateX(-50%) translateY(0px);
+}
+
+.modal-alb {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.modal_overlay {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.6;
+}
+.modal_content {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 1;
+    animation-name: slideIn;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%) translateY(100%) scale(0);
+    }
+    to {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+.inner_content {
+}
+
+.div-img {
+    height: 680px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+}
+
+.close-icon {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+.div-img-small {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+.slick-dots {
+    bottom: -7.5px;
+}
+
+@media (max-width: 1024px) {
+    .div-img {
+        height: 400px;
+    }
+}
+@media (max-width: 576px) {
+    .div-img {
+        height: 100%;
+    }
+}
+
+.box_description {
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    padding: 24px 24px 24px 0;
+    margin-left: 24px;
+    .box-1 {
+        h2 {
+            font-weight: 600;
+            font-style: italic;
+        }
+        p {
+            margin: 16px 0;
+            font-weight: 500;
+        }
+
+        .time {
+            margin: 16px 0;
+        }
+        .place {
+            margin: 16px 0;
+        }
+        .trangThai {
+            margin: 16px 0;
+        }
+    }
+
+    .box-2 {
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        p {
+            font-weight: 500;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            input {
+                border: 1px solid #ccc;
+                padding: 8px;
+                outline: 1px solid #ccc;
+                margin: 16px 0;
+            }
+            button {
+                margin: 0 20px;
+                background: #0000007a;
+                padding: 8px 0;
+            }
+        }
+        ul {
+            padding: 0;
+        }
+        .icon {
+            font-size: 24px;
+            margin: 0 24px;
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.comments_acc {
+    margin: 28px 0;
+    li {
+        margin: 8px 0;
+    }
+    .account {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .d-flex {
+            align-items: center;
+        }
+        .acc_img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        p {
+            color: black;
+            margin: 0 12px;
+        }
+        .time_ago {
+        }
+    }
 }
