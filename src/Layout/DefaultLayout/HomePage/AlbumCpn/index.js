@@ -20,7 +20,7 @@ import { SliderCongChieng, SliderLamGom, SliderMuaRoiNuoc, SliderHatXam, SliderS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-import { boxCongChieng, boxLamGom } from './Content';
+import { boxCongChieng, boxLamGom, muaRoiNuoc, suThi, sonMai, toHe, xam, trangPhucDT, tranhDH } from './Content';
 
 
 function AlbumCpn() {
@@ -60,44 +60,44 @@ function AlbumCpn() {
       image: image3,
       name: 'Múa rối nước',
       list: SliderMuaRoiNuoc,
-      box: boxCongChieng
+      box: muaRoiNuoc
 
     },
     {
       image: image4,
       name: 'Sử thi Tây Nguyên',
       list: SliderSuThi,
-      box: boxCongChieng
+      box: suThi
     },
     {
       image: image5,
       name: '	Nghệ thuật Sơn mài',
       list: SliderSonMai,
-      box: boxCongChieng
+      box: sonMai
     },
     {
       image: image6,
       name: 'Nghệ thuật tò he',
       list: SliderToHe,
-      box: boxCongChieng
+      box: toHe
     },
     {
       image: image7,
       name: 'Nghệ thuật hát xẩm',
       list: SliderHatXam,
-      box: boxCongChieng
+      box: xam
     },
     {
       image: image8,
       name: 'Trang phục truyền thống đồng bào dân tộc',
       list: SliderTrangPhuc,
-      box: boxCongChieng
+      box: trangPhucDT
     },
     {
       image: image9,
       name: 'Nghề làm tranh Đông Hồ',
       list: SliderTranh,
-      box: boxCongChieng
+      box: tranhDH
     },
   ]
 

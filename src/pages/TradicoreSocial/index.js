@@ -1,12 +1,12 @@
-import React from 'react';
 
-import { DarkModeContextProvider } from '~/Layout/DefaultLayout/TradicoreSocial/context/darkModeContext';
 import HomeSocial from '~/Layout/DefaultLayout/TradicoreSocial/homeSocial/HomeSocial';
-
-const TradicoreSocial = () => {
+import Feed from '~/Layout/DefaultLayout/TradicoreSocial/component/feed/Feed';
+function TradicoreSocial() {
     return (
-        <h2>TradicoreSocial</h2>
+        <h1>Tradicore</h1>
+
     );
-};
+}
 
 export default TradicoreSocial;
+

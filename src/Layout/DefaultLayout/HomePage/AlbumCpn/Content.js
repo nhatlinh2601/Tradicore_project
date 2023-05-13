@@ -68,10 +68,10 @@ const boxLamGom = {
     trangThai: 'Trạng thái : Cần được bảo tồn'
 }
 const muaRoiNuoc = {
-    des1: 'Được UNESCO ghi danh vào Danh sách di sản văn hóa phi vật thể cần bảo vệ khẩn cấp',
-    des2: 'Chủ yếu là đồ gia dụng, đồ dùng cúng lễ và đồ mỹ nghệ gồm chum (jek), nồi (gok), mâm (cambak), bình (bilaok)…',
-    time: '16 giờ 12 phút, ngày 29.11',
-    place: 'Người Chăm',
+    des1: 'Múa rối nước là một loại hình nghệ thuật sân khấu dân gian truyền thống ra đời từ nền văn minh lúa nước.',
+    des2: 'Múa rối nước thường được diễn vào dịp lễ, hội làng, ngày vui, ngày Tết... ',
+    time: 'Múa / rối nước đã ra đời chừng hơn 10 thế kỷ trước ở vùng châu thổ sông Hồng.',
+    place: '',
     trangThai: 'Trạng thái : Cần được bảo tồn'
 }
 const suThi = {
@@ -95,10 +95,31 @@ const toHe = {
     place: 'làng Xuân La',
     trangThai: null
 }
+const xam = {
+    des1: 'Xẩm là một loại hình dân ca của Việt Nam, phổ biến ở đồng bằng và trung du Bắc Bộ.',
+    des2: 'Hát Xẩm còn là loại hình âm nhạc dân gian mang đậm tính nhân văn, thẩm mỹ và giáo dục về đạo đức, lối sống của mọi tầng lớp trong xã hội',
+    time: ' Những bài hát Xẩm mang đậm triết lý nhân sinh, tính giáo dục, nhân văn sâu sắc',
+    place: '',
+    trangThai: null
+}
+const trangPhucDT = {
+    des1: 'Những trang phục dân tộc Việt Nam đẹp ngẩn ngơ làm nên bản sắc văn hóa Việt',
+    des2: 'Trang phục dân tộc Việt Nam đẹp và vô cùng phong phú. Mỗi dân tộc lại mang đến một dấu ấn riêng, thể hiện qua thiết kế, màu sắc và chất liệu.',
+    time: 'Nhờ đó mà văn hóa trang phục của người Việt trở nên cực kỳ đa dạng, không dễ bị nhầm lẫn với bất kỳ trang phục nào trên thế giới.',
+    place: '',
+    trangThai: null
+}
+const tranhDH = {
+    des1: 'Tranh Đông Hồ, hay tên đầy đủ là tranh khắc gỗ dân gian Đông Hồ[1][2][3], là một dòng tranh dân gian Việt Nam với xuất xứ từ làng Đông Hồ',
+    des2: 'Tranh làng Hồ được yêu thích bởi thể hiện những đề tài quen thuộc, gắn liền với hình ảnh làng quê, cuộc sống bình dị hằng ngày của người Việt. ',
+    time: 'Nghề làm tranh dân gian Đông Hồ là Di sản văn hóa phi vật thể cấp Quốc gia',
+    place: '',
+    trangThai: null
+}
 
 
 
 
 export { SliderCongChieng, SliderLamGom, SliderMuaRoiNuoc, SliderHatXam, SliderSonMai, SliderSuThi, SliderToHe, SliderTrangPhuc, SliderTranh }
-export { boxCongChieng, boxLamGom }
+export { boxCongChieng, boxLamGom, muaRoiNuoc, suThi, sonMai, toHe, xam, trangPhucDT, tranhDH }
 
