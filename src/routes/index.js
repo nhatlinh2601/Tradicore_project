@@ -23,6 +23,7 @@ const publicRoutes = [
         path: '/register',
         component: Register,
 
+
     },
     {
         path: '/tradicoreSocial',

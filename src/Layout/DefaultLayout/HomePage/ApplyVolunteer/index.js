@@ -28,22 +28,21 @@ function ApplyVolunteer() {
 
                             <div className='box_des'>
                                 <p className='description'> Đẩy mạnh tuyên truyền, quảng bá thông qua các hoạt động về nguồn, hành trình đến với địa chỉ đỏ; vận động thanh thiếu nhi hát Quốc ca tại các địa chỉ đỏ</p>
-                                <p className='place'>Hà Nội</p>
+                                <Button className='box-btn' text>Quick View</Button>
                             </div>
                         </div>
                         <div className='col-sm-4 col-xl-3'>
 
                             <div className='box_des'>
                                 <p className='description'>Tổ chức nhiều câu lạc bộ, đội hình tình nguyện hướng dẫn du lịch, giới thiệu danh lam, danh thắng, di sản văn hóa truyền thống của địa phương.</p>
-                                <p className='place'>Hà Nội</p>
+                                <Button className='box-btn' text>Quick View</Button>
                             </div>
                         </div>
                         <div className='col-sm-4 col-xl-3'>
 
                             <div className='box_des'>
                                 <p className='description'> Bảo vệ và phục hồi các công trình cổ, di tích lịch sử, tham gia các hoạt động làm sạch môi trường vùng xung quanh các di sản văn hóa Việt Nam.</p>
-                                <p className='place'>Hà Nội</p>
-
+                                <Button className='box-btn' text>Quick View</Button>
                             </div>
                             <Button large text rightIcon={<FontAwesomeIcon icon={faUpLong} />}>APPLY NOW</Button>
                         </div>
