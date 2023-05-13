@@ -7,14 +7,30 @@ import { ChatBubbleOutline, MoreVert, Favorite, ThumbUp, ThumbUpAltOutlined, Sha
 import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
-    const LikeButton = () => {
-        const [likeCount, setLikeCount] = useState(50);
+    var count = post.like;
+    const [like, setLike] = useState(count);
 
-        // eslint-disable-next-line no-unused-vars
-        const increaseLike = () => {
-            setLikeCount(+1);
-        };
+    const onClick1 = () => {
+        setLike((like) => like + 1);
     };
+    const [likes, setLikes] = useState(count);
+    const [lastClickTime, setLastClickTime] = useState(0);
+
+    const handleClick = () => {
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - lastClickTime;
+
+        if (elapsedTime > 500) {
+            if (likes > count) {
+                setLikes(likes);
+            } else {
+                setLikes(likes + 1);
+            }
+        }
+
+        setLastClickTime(currentTime);
+    };
+    //just kidding
 
     console.log(post);
 
@@ -47,7 +63,7 @@ const Post = ({ post }) => {
                     <div className="postBottomLeft">
                         <Favorite className="bottomLeftIcon" style={{ color: 'red' }} />
                         <ThumbUp className="bottomLeftIcon" style={{ color: '#011631' }} />
-                        <span className="postLikeCounter"> {post.like} </span>
+                        <span className="postLikeCounter"> {likes} </span>
                     </div>
                     <div className="postBottomRight">
                         <span className="postCommentText">{post.comment} · comments · share</span>
@@ -56,9 +72,11 @@ const Post = ({ post }) => {
 
                 <hr className="footerHr" />
                 <div className="postBottomFooter">
-                    <span className="postBottomFooterItem" onClick={post.increaseLike}>
-                        <ThumbUpAltOutlined className="footerIcon" />
-                        <span className="footerText">Like</span>
+                    <span className="postBottomFooterItem">
+                        <button onClick={handleClick}>
+                            <ThumbUpAltOutlined className="footerIcon" />
+                            <span className="footerText">Like</span>
+                        </button>
                     </span>
 
                     <div className="postBottomFooterItem">
