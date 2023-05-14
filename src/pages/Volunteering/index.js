@@ -1,7 +1,8 @@
-function Volunteering() {
+import Volunteering from "~/Layout/DefaultLayout/Volunteering";
+function Volunteer() {
     return (
-        <h2>Volunteering</h2>
+        <Volunteering />
     );
 }
 
-export default Volunteering;
+export default Volunteer;

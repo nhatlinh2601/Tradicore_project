@@ -1,6 +1,6 @@
 import HeaderOnly from '~/Layout/HeaderOnly';
 import Home from '~/pages/Home';
-import Volunteering from '~/pages/Volunteering';
+import Volunteer from '~/pages/Volunteering';
 import News from '~/pages/News';
 import Login from '~/pages/Login';
 import Register from '~/pages/Register';
@@ -13,7 +13,7 @@ const publicRoutes = [
     },
     {
         path: '/volunteering',
-        component: Volunteering,
+        component: Volunteer,
     },
     {
         path: '/login',

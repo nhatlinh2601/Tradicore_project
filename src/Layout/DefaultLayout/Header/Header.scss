@@ -190,9 +190,13 @@ header {
 }
 
 .menu-mobile-ipad {
-    margin-top: $default-layout-header-height;
     background: $primary-color;
+    position: fixed;
+    top: $default-layout-header-height;
+    left: 0;
+    right: 0;
     display: flex;
+    z-index: 99999;
     transition: all 0.4s linear;
 }
 .main-menu {
@@ -214,11 +218,11 @@ header {
 }
 
 @media (max-width: 739px) {
-    .menu-mobile-ipad {
-        margin-top: $default-layout-header-height-mobile-ipad;
-    }
     .main-menu:first-child {
         border-bottom: 1px solid #ccc;
+    }
+    .menu-mobile-ipad {
+        top: $default-layout-header-height-mobile-ipad;
     }
 }
 
@@ -238,8 +242,9 @@ header {
         height: 48px;
     }
     .menu-mobile-ipad {
-        margin-top: $default-layout-header-height-mobile-ipad;
+        top: $default-layout-header-height-mobile-ipad;
     }
+
     .main-menu:first-child {
         border-bottom: 1px solid #ccc;
     }

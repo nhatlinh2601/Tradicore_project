@@ -81,6 +81,11 @@
             display: flex;
             align-items: center;
             margin: 36px 0;
+            transition: all 0.4s ease;
+
+            :hover {
+                background-color: black;
+            }
         }
         .prd_icon {
             color: grey;
@@ -195,7 +200,7 @@
         margin: 16px 0;
 
         .slogan {
-            top: -30px;
+            top: 10px;
             font-size: 16px;
             z-index: 999;
         }
