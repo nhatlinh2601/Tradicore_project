@@ -6,6 +6,34 @@ import { ChatBubbleOutline, MoreVert, Favorite, ThumbUp, ThumbUpAltOutlined, Sha
 import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
+<<<<<<< HEAD
+    var count = post.like;
+    const [like, setLike] = useState(count);
+
+    const onClick1 = () => {
+        setLike((like) => like + 1);
+    };
+    const [likes, setLikes] = useState(count);
+    const [lastClickTime, setLastClickTime] = useState(0);
+
+    const handleClick = () => {
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - lastClickTime;
+
+        if (elapsedTime > 500) {
+            if (likes > count) {
+                setLikes(likes);
+            } else {
+                setLikes(likes + 1);
+            }
+        }
+
+        setLastClickTime(currentTime);
+    };
+    //just kidding
+
+=======
+>>>>>>> 66435dae9ca7de9e08f1783608e66965e6b0e922
     console.log(post);
     return (
         <div className="post">
@@ -36,7 +64,11 @@ const Post = ({ post }) => {
                     <div className="postBottomLeft">
                         <Favorite className="bottomLeftIcon" style={{ color: 'red' }} />
                         <ThumbUp className="bottomLeftIcon" style={{ color: '#011631' }} />
+<<<<<<< HEAD
+                        <span className="postLikeCounter"> {likes} </span>
+=======
                         <span className="postLikeCounter">{post.like}</span>
+>>>>>>> 66435dae9ca7de9e08f1783608e66965e6b0e922
                     </div>
                     <div className="postBottomRight">
                         <span className="postCommentText">{post.comment} · comments · share</span>
@@ -45,10 +77,20 @@ const Post = ({ post }) => {
 
                 <hr className="footerHr" />
                 <div className="postBottomFooter">
+<<<<<<< HEAD
+                    <span className="postBottomFooterItem">
+                        <button onClick={handleClick}>
+                            <ThumbUpAltOutlined className="footerIcon" />
+                            <span className="footerText">Like</span>
+                        </button>
+                    </span>
+
+=======
                     <div className="postBottomFooterItem">
                         <ThumbUpAltOutlined className="footerIcon" />
                         <span className="footerText">Like</span>
                     </div>
+>>>>>>> 66435dae9ca7de9e08f1783608e66965e6b0e922
                     <div className="postBottomFooterItem">
                         <ChatBubbleOutline className="footerIcon" />
                         <span className="footerText">Comment</span>
