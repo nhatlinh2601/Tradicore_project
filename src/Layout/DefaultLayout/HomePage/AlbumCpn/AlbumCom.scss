@@ -196,9 +196,26 @@
         .title {
             font-size: 16px;
             font-weight: 600;
+            margin: 0 16px;
         }
         p {
             font-weight: 500;
+        }
+
+        button {
+            color: #ccc;
+            font-size: 20px;
+            transition: all 0.4s linear;
+
+            &:hover {
+                color: $primary-color;
+                transform: scale(1.05);
+            }
+        }
+        span {
+            margin: 0 4px;
+            font-weight: 500;
+            color: #333;
         }
 
         form {

@@ -6,7 +6,10 @@ import Login from '~/pages/Login';
 import Register from '~/pages/Register';
 import TradicoreSocial from '~/pages/TradicoreSocial';
 import Tours from '~/pages/Tours';
+
+
 const publicRoutes = [
+
     {
         path: '/',
         component: Home,
@@ -14,6 +17,7 @@ const publicRoutes = [
     {
         path: '/volunteering',
         component: Volunteer,
+
     },
     {
         path: '/login',
@@ -22,8 +26,6 @@ const publicRoutes = [
     {
         path: '/register',
         component: Register,
-
-
     },
     {
         path: '/tradicoreSocial',
@@ -38,7 +40,8 @@ const publicRoutes = [
         path: '/news',
         component: News,
         // layout: HeaderOnly
-    }
+    },
+
 ];
 const privateRoutes = [];
 

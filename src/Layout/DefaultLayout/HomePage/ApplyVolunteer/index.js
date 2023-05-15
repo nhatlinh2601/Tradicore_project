@@ -12,7 +12,7 @@ function ApplyVolunteer() {
         <div className='wrapper_apply'>
             <div className='container'>
                 <div className='apply_content'>
-                    <h1>APPLY <span> AS VOLUNTEER </span></h1>
+                    <h1>APPLY <span className='volunteer'> AS VOLUNTEER </span></h1>
                     <div className='row main_content'>
                         <div className='d-none d-xl-block col-sm-3'>
                             <div className='box_title'>

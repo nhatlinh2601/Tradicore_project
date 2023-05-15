@@ -1,24 +1,45 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { publicRoutes } from './routes';
 import DefaultLayout from './Layout/DefaultLayout';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
+
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+
 function App() {
     return (
         <Router>
             <div className="App">
+                <ScrollToTop />
                 <Routes>
                     {publicRoutes.map((route, index) => {
-
                         const Page = route.component;
-                        let Layout = DefaultLayout
+                        let Layout = DefaultLayout;
+
                         if (route.layout) {
-                            Layout = route.layout
+                            Layout = route.layout;
                         } else if (route.layout === null) {
-                            Layout = Fragment
+                            Layout = Fragment;
                         }
-                        return <Route key={index} path={route.path} element={<Layout>
-                            <Page />
-                        </Layout>} />;
+
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
+                        );
                     })}
                 </Routes>
             </div>

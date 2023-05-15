@@ -36,6 +36,9 @@ function SectionCore() {
     return (
         <div className='wrap-section_core'>
             <div className='container'>
+                {/* <div className='content_top'>
+                    <h1>TIN TỨC NỔI BẬT</h1>
+                </div> */}
                 <div className='row row-center'>
 
                     <div className='col-lg-6'>

@@ -18,7 +18,7 @@ import account3 from '~/assets/images/img-content/acc3.jpg'
 
 import { SliderCongChieng, SliderLamGom, SliderMuaRoiNuoc, SliderHatXam, SliderSonMai, SliderSuThi, SliderToHe, SliderTrangPhuc, SliderTranh } from './Content';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClose, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faClose, faHeart, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 import { boxCongChieng, boxLamGom, muaRoiNuoc, suThi, sonMai, toHe, xam, trangPhucDT, tranhDH } from './Content';
 
@@ -36,7 +36,7 @@ function AlbumCpn() {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
-    speed: 150,
+    speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -135,6 +135,18 @@ function AlbumCpn() {
     setComments((prevComments) => [newComment, ...prevComments.slice(0, 1)]);
   };
 
+  const [liked, setLiked] = useState(false);
+  const [heartQuantity, setHeartQuantity] = useState(31);
+
+
+  const handleClickHeart = () => {
+    setLiked(prevLiked => !prevLiked);
+    setHeartQuantity(prevQuantity => (liked ? prevQuantity - 1 : prevQuantity + 1));
+
+  };
+  const heartColor = liked ? '#2f7c72' : '#ccc';
+
+
 
   return (
     <div className='wrapperAlb'>
@@ -205,7 +217,14 @@ function AlbumCpn() {
                       </div>
 
                       <div className='box-2'>
-                        <p className='title'>Comments</p>
+                        <div style={{ alignItems: 'center' }} className='d-flex'>
+                          <button style={{ color: heartColor }} onClick={handleClickHeart}>
+                            <FontAwesomeIcon icon={faHeart} />
+
+                          </button>
+                          <span className='heart_quantity'>{heartQuantity}</span>
+                          <p className='title'>Comments</p>
+                        </div>
 
                         <CommentForm onAddComment={handleAddComment} />
                         <div>
