@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faDownload, faEllipsisVertical, faEarth, faGear, faMagic, faRightToBracket, faSearch, faSign } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
+import { isUser } from '../Login';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Header.scss'
+
 
 function Header() {
 
@@ -23,8 +25,6 @@ function Header() {
     return (
 
         <header>
-
-
             <div className='wrap-menu'>
                 <div className='container'>
                     <div className='wrap-menu_content'>
@@ -60,6 +60,7 @@ function Header() {
 
 
 
+
                         <div className='menu-actions'>
                             <div className='menu-btns d-none d-md-block'>
                                 <Button className='menu-btn' text to={"/login"} leftIcon={<FontAwesomeIcon icon={faRightToBracket} />}>
@@ -78,6 +79,7 @@ function Header() {
                                 <FontAwesomeIcon icon={faGear} />
                             </button>
                         </div>
+
 
                     </div>
                 </div>

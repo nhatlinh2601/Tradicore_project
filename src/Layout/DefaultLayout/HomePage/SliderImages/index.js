@@ -2,6 +2,7 @@ import './SliderImages.scss'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick'
+import { useState } from 'react';
 import nhaNhacCDHue from '~/assets/images/img-disanVH/nhaNhacCungDinhHue.jpg'
 import vanHoaCongChieng from '~/assets/images/img-disanVH/KhongGianVHCongChieng.jpg'
 import quanHoBN from '~/assets/images/img-disanVH/QuanHoBN.jpg'
@@ -18,16 +19,24 @@ import tinNguong from '~/assets/images/img-disanVH/tinNguong.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
+import './HeartModal.scss'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 function SliderImages() {
+
+    const [isShowing, setIsShowing] = useState(false);
+    const [isHearted, setIsHearted] = useState(false);
+    const [index, setIndex] = useState(null);
+
+
     const settings = {
         dots: false,
         infinite: true,
-        speed: 50,
+        speed: 250,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        fade: true
+
 
     };
 
@@ -144,53 +153,80 @@ function SliderImages() {
     return (
         <>
             <div className='slider-wrap'>
-                <div className='container'>
-                    <Slider {...settings}>
-                        {
-                            imagesSlider.map((item, index) => {
-                                return (
-                                    <div key={index} className='slider_content'>
-                                        <div className='contaier-fluid'>
-                                            <div className='container'>
-                                                <div className='slider_item'>
-                                                    <div className='row'>
-                                                        <div className='col-md-4 col-lg-4 col-sm-12 col-12'>
-                                                            <div className='left_item-content'>
-                                                                <div className='left_item'>
 
-                                                                    <h1 className='prd_name1'>{item.name1}</h1>
-                                                                    <h1 className='prd_name2' >{item.name2}</h1>
-                                                                    <h3 className='prd_details'>{item.details}</h3>
-                                                                    <div className='prd_more'>
+                <Slider {...settings}>
+                    {
+                        imagesSlider.map((item, index) => {
+                            return (
+                                <div key={index} className='slider_content'>
+                                    <div className='contaier-fluid'>
+                                        <div className='container'>
+                                            <div className='slider_item'>
+                                                <div className='row'>
+                                                    <div className='col-md-4 col-lg-4 col-sm-12 col-12'>
+                                                        <div className='left_item-content'>
+                                                            <div className='left_item'>
 
-                                                                        <button className='prd_icon'><FontAwesomeIcon icon={faHeart} /></button>
-                                                                        <p className='prd_years'>{item.years}</p>
-                                                                    </div>
-                                                                    <Button className='menu-btn' large text to={"/news"} leftIcon={<FontAwesomeIcon icon={faStar} />}>
-                                                                        SEE MORE
-                                                                    </Button>
+                                                                <h1 className='prd_name1'>{item.name1}</h1>
+                                                                <h1 className='prd_name2' >{item.name2}</h1>
+                                                                <h3 className='prd_details'>{item.details}</h3>
+                                                                <div className='prd_more'>
+
+                                                                    <button onClick={() => {
+                                                                        setIsShowing(true);
+                                                                        setIndex(index)
+                                                                    }} className='prd_icon'><FontAwesomeIcon icon={faHeart} /></button>
+                                                                    <p className='prd_years'>{item.years}</p>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className='col-md-8 col-lg-8 col-sm-12 col-12'>
-                                                            <div className='right_item'>
-                                                                <h2 className='slogan'>TỰ HÀO BẢN SẮC - TỎA SÁNG TẦM VÓC</h2>
-                                                                <div className='wrap-images'>
-                                                                    <img className='img-link' src={item.image} alt="" />
-                                                                </div>
+                                                                <Button className='menu-btn' large text to={"/news"} leftIcon={<FontAwesomeIcon icon={faStar} />}>
+                                                                    SEE MORE
+                                                                </Button>
                                                             </div>
                                                         </div>
                                                     </div>
-
+                                                    <div className='col-md-8 col-lg-8 col-sm-12 col-12'>
+                                                        <div className='right_item'>
+                                                            <h2 className='slogan'>TỰ HÀO BẢN SẮC - TỎA SÁNG TẦM VÓC</h2>
+                                                            <div className='wrap-images'>
+                                                                <img className='img-link' src={item.image} alt="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                )
-                            })
-                        }
-                    </Slider >
-                </div>
+                                </div>
+                            )
+                        })
+                    }
+                </Slider >
+                {
+                    isShowing && <div className="modal__heart">
+                        <div className="modal__overlay"></div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }} className='container'>
+                            <div className="modal__heart-content">
+                                <div className='modal__content'>
+                                    <button className="modal__succes-icon">
+                                        <FontAwesomeIcon style={{ position: 'absolute', transform: 'translateX(-50%) translateY(-50%)' }} icon={faCheck} />
+                                    </button>
+                                    <div style={{ marginTop: '40px' }} className="modal__notify">
+                                        <h3 className="modal__notify-product">{imagesSlider[index].name1} {imagesSlider[index].name2}</h3>
+                                        <p>đã thêm vào danh mục yêu thích !</p>
+                                    </div>
+                                    <div className="modal__submit">
+                                        <button onClick={() => {
+                                            setIsShowing(false)
+                                        }} className="modal__btn-submit">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
             </div>
 
 

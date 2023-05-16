@@ -73,3 +73,12 @@
         }
     }
 }
+
+@media (max-width: 540px) {
+    .apply_content h1 {
+        font-size: 24px;
+    }
+    .apply_content .volunteer {
+        padding: 0;
+    }
+}

@@ -1,0 +1,113 @@
+@import '/src/components/GlobalStyles/variables.scss';
+.modal__heart {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    // display: none;
+    transition: all 0.4s linear;
+}
+.modal__heart-content {
+    .modal__notify {
+        h3 {
+            font-size: 30px;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin: 12px 0;
+        }
+    }
+    .modal__content {
+        position: relative;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 1;
+        animation-name: scaleIn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        padding: 140px 0;
+        transform: scale(0);
+        width: 478px;
+        position: relative;
+        background: white;
+        border-radius: 5px;
+        z-index: 99;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: t scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.modal__submit {
+    button {
+        position: absolute;
+        float: right;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 12px 30px;
+        background: $primary-color;
+        border-radius: 10px;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+    }
+}
+.showModalHeart {
+    transform: unset;
+    pointer-events: visible;
+    opacity: 1;
+}
+.modal__succes-icon {
+    height: 120px;
+    width: 120px;
+    margin: 32px auto;
+    padding: 17px;
+    border-radius: 50%;
+    border: 6px solid hsla(98, 55%, 69%, 0.2);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    color: #a5dc86;
+}
+@keyframes scaleRotate {
+    from {
+        transform: scale(0.75);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.success-transform {
+    transform: unset !important;
+    opacity: 1 !important;
+}
