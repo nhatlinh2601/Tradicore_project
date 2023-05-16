@@ -1,12 +1,14 @@
-
+import React from 'react';
 import HomeSocial from '~/Layout/DefaultLayout/TradicoreSocial/homeSocial/HomeSocial';
-import Feed from '~/Layout/DefaultLayout/TradicoreSocial/component/feed/Feed';
-function TradicoreSocial() {
-    return (
-        <h1>Tradicore</h1>
 
+const TradicoreSocial = () => {
+    return (
+        <>
+            <HomeSocial />
+        </>
     );
-}
+};
 
 export default TradicoreSocial;
+
 

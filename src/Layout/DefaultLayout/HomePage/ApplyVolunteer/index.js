@@ -4,7 +4,7 @@ import React from 'react'
 import bacHo from '~/assets/images/img-khoAnh/bacHo.jpg'
 import Button from '~/components/Button'
 import './ApplyVolunteer.scss'
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { Link } from 'react-router-dom'
 
 
 function ApplyVolunteer() {
@@ -28,23 +28,32 @@ function ApplyVolunteer() {
 
                             <div className='box_des'>
                                 <p className='description'> Đẩy mạnh tuyên truyền, quảng bá thông qua các hoạt động về nguồn, hành trình đến với địa chỉ đỏ; vận động thanh thiếu nhi hát Quốc ca tại các địa chỉ đỏ</p>
-                                <Button className='box-btn' text>Quick View</Button>
+                                <Button className='box-btn' text>
+                                    <Link to={'/volunteering'}> Quick View</Link>
+
+                                </Button>
                             </div>
                         </div>
                         <div className='col-sm-4 col-xl-3'>
 
                             <div className='box_des'>
                                 <p className='description'>Tổ chức nhiều câu lạc bộ, đội hình tình nguyện hướng dẫn du lịch, giới thiệu danh lam, danh thắng, di sản văn hóa truyền thống của địa phương.</p>
-                                <Button className='box-btn' text>Quick View</Button>
+                                <Button className='box-btn' text>
+                                    <Link to={'/volunteering'}> Quick View</Link>
+
+                                </Button>
                             </div>
                         </div>
                         <div className='col-sm-4 col-xl-3'>
 
                             <div className='box_des'>
                                 <p className='description'> Bảo vệ và phục hồi các công trình cổ, di tích lịch sử, tham gia các hoạt động làm sạch môi trường vùng xung quanh các di sản văn hóa Việt Nam.</p>
-                                <Button className='box-btn' text>Quick View</Button>
+                                <Button className='box-btn' text>
+                                    <Link to={'/volunteering'}> Quick View</Link>
+
+                                </Button>
                             </div>
-                            <Button large text rightIcon={<FontAwesomeIcon icon={faUpLong} />}>APPLY NOW</Button>
+                            <div style={{ marginTop: '30px' }}><Button large text rightIcon={<FontAwesomeIcon icon={faUpLong} />}>APPLY NOW</Button></div>
                         </div>
                     </div>
                 </div>

@@ -52,13 +52,19 @@
             box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.2);
             background: white;
             height: 250px;
-            margin-bottom: 36px;
+            margin-bottom: 8px;
 
             .box-btn {
                 position: absolute;
                 bottom: 20px;
                 left: 10px;
                 transition: all 0.4s ease-in-out;
+                a {
+                    transition: all 0.4s ease-in-out;
+                    &:hover {
+                        color: black;
+                    }
+                }
             }
             .description {
                 color: black;

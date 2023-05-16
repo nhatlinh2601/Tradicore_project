@@ -6,6 +6,8 @@ import Login from '~/pages/Login';
 import Register from '~/pages/Register';
 import TradicoreSocial from '~/pages/TradicoreSocial';
 import Tours from '~/pages/Tours';
+import Profile from '~/Layout/DefaultLayout/TradicoreSocial/profile/Profile';
+import EditProfile from '~/Layout/DefaultLayout/TradicoreSocial/editprofile/EditProfile';
 
 
 const publicRoutes = [
@@ -40,6 +42,21 @@ const publicRoutes = [
         path: '/news',
         component: News,
         // layout: HeaderOnly
+    },
+    {
+        path: '/tradicoreSocial/profile/userId',
+        component: Profile,
+        layout: null
+    },
+    {
+        path: '/tradicoreSocial/profile/userId/edit',
+        component: EditProfile,
+        layout: null
+    },
+    {
+        path: '/volunteering/actions',
+        component: Profile,
+        layout: null
     },
 
 ];

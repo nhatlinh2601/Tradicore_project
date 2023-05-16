@@ -30,11 +30,11 @@ function Header() {
                     <div className='wrap-menu_content'>
                         <div className='menu-content_left'>
                             <div className='menu-logo'>
-                                <button className='menu-logo_icon'>
+                                <button onClick={() => window.scrollTo(0, 0)} className='menu-logo_icon'>
                                     <Link to="/">
                                         <FontAwesomeIcon icon={faEarth} /> </Link>
                                 </button>
-                                <li className='menu-logo_title'>
+                                <li onClick={() => window.scrollTo(0, 0)} className='menu-logo_title'>
                                     <Link to="/"> TRADICORE </Link>
                                 </li>
 
@@ -52,9 +52,9 @@ function Header() {
                                 <li className='menu_item'>
                                     <Link to="/tradicoreSocial"> TRADICORE Social </Link>
                                 </li>
-                                <li className='menu_item'>
+                                {/* <li className='menu_item'>
                                     <Link to="/tours"> Tour </Link>
-                                </li>
+                                </li> */}
                             </div>
                         </div>
 

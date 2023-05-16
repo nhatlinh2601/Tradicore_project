@@ -3,7 +3,7 @@ header {
     width: 100%;
 }
 .top-bar {
-    height: 40px;
+    height: 4rem;
     background: #222;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ header {
 }
 .top-bar_tittle {
     margin: 0;
-    font-size: 12px;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
 }
@@ -31,12 +31,12 @@ header {
 .action_item {
     position: relative;
     list-style-type: none;
-    padding: 0 25px;
-    font-size: 12px;
+    padding: 0 2.5rem;
+    font-size: 1.2rem;
     transition: all 0.3s linear;
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 4rem;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 .action_item:last-child {
@@ -50,7 +50,7 @@ header {
 
 .wrap-menu {
     position: fixed;
-    z-index: 10;
+    z-index: 99999;
     top: 0;
     width: 100%;
     left: 0;
@@ -59,7 +59,7 @@ header {
     box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
 }
 .wrap-menu_content {
-    height: 65px;
+    height: 6.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,33 +81,33 @@ header {
 }
 .menu-logo_icon {
     background-color: transparent;
-    font-size: 44px;
+    font-size: 4.4rem;
     color: $primary-color;
 
-    a:hover {
+    a {
         color: $primary-color;
     }
 }
 .menu-logo_title {
     font-weight: 700;
-    font-size: 31px;
-    margin: 0 16px;
+    font-size: 3.1rem;
+    margin: 0 1.6rem;
     list-style-type: none;
 
-    a:hover {
+    a {
         color: $primary-color;
     }
 }
 .menu_list {
     display: flex;
     list-style-type: none;
-    margin-left: 40px;
+    margin-left: 4rem;
 }
 .menu_list li a {
     position: relative;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: black;
-    margin: 0 16px;
+    margin: 0 1.6rem;
     font-weight: 500;
     transition: all 0.2s linear;
 
@@ -135,9 +135,9 @@ header {
 
     .menu-icon {
         background-color: transparent;
-        margin: 0 20px;
+        margin: 0 2rem;
         transition: all 0.4s ease-in-out;
-        font-size: 20px;
+        font-size: 2rem;
 
         &:hover {
             cursor: pointer;
@@ -152,16 +152,16 @@ header {
     }
     .menu-menu {
         background-color: transparent;
-        margin-left: 20px;
-        font-size: 20px;
+        margin-left: 2rem;
+        font-size: 2rem;
     }
 
     .search_box {
         border: 1px solid #ccc;
-        padding: 20px;
-        border-radius: 80px;
-        width: 64px;
-        margin-right: 24px;
+        padding: 2rem;
+        border-radius: 8rem;
+        width: 6.4rem;
+        margin-right: 2.4rem;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -175,7 +175,7 @@ header {
         }
 
         .search_input {
-            margin-left: 20px;
+            margin-left: 2rem;
             width: 0px;
             position: absolute;
             top: 0;
@@ -186,7 +186,7 @@ header {
     }
 }
 .input_change-width {
-    width: 400px !important;
+    width: 40rem !important;
 }
 
 .menu-mobile-ipad {
@@ -201,13 +201,14 @@ header {
 }
 .main-menu {
     color: black;
-    padding: 12px 0;
+    padding: 1.2rem 0;
 }
 .main-menu > li {
     color: white;
-    padding: 6px 0;
+    padding: 0.6rem 0;
 
     a {
+        color: white;
         transition: all 0.2s;
         &:hover {
             cursor: pointer;
@@ -218,34 +219,40 @@ header {
 }
 
 @media (max-width: 739px) {
-    .main-menu:first-child {
-        border-bottom: 1px solid #ccc;
+    html {
+        font-size: 50%;
     }
-    .menu-mobile-ipad {
-        top: $default-layout-header-height-mobile-ipad;
-    }
+    // .main-menu:first-child {
+    //     border-bottom: 1px solid #ccc;
+    // }
+    // .menu-mobile-ipad {
+    //     top: $default-layout-header-height-mobile-ipad;
+    // }
 }
 
 // mobile
 @media (max-width: 739px) {
-    .menu-logo_icon {
-        font-size: 24px;
+    html {
+        font-size: 50% !important;
     }
-    .menu-logo_title {
-        font-size: 24px;
-        margin: 0 12px;
-    }
-    .menu-search {
-        margin: 0;
-    }
-    .wrap-menu_content {
-        height: 48px;
-    }
-    .menu-mobile-ipad {
-        top: $default-layout-header-height-mobile-ipad;
-    }
+    // .menu-logo_icon {
+    //     font-size: 24px;
+    // }
+    // .menu-logo_title {
+    //     font-size: 24px;
+    //     margin: 0 12px;
+    // }
+    // .menu-search {
+    //     margin: 0;
+    // }
+    // .wrap-menu_content {
+    //     height: 48px;
+    // }
+    // .menu-mobile-ipad {
+    //     top: $default-layout-header-height-mobile-ipad;
+    // }
 
-    .main-menu:first-child {
-        border-bottom: 1px solid #ccc;
-    }
+    // .main-menu:first-child {
+    //     border-bottom: 1px solid #ccc;
+    // }
 }

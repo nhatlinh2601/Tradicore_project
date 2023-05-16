@@ -7,9 +7,9 @@ function HomePage() {
     return (
         <>
             <SliderImages />
-            <SectionCore />
             <AlbumCpn />
             <SliderComment />
+            <SectionCore />
             <ApplyVolunteer />
 
         </>

@@ -3,67 +3,95 @@ import './sectionCore.scss'
 import { faBook, faBullhorn, faHammer, faHandHoldingHeart, faHeader, faHouse, faLocation, faPlane } from '@fortawesome/free-solid-svg-icons';
 import images from '~/assets/images/img-content/content2.jpg';
 import { Link } from 'react-router-dom';
+import hd4 from '~/assets/images/img-content/new1.jpg'
+import hd2 from '~/assets/images/img-content/new2.jpg'
+import hd3 from '~/assets/images/img-content/new3.jpg'
+import hd1 from '~/assets/images/img-content/new4.jpg'
+
 
 function SectionCore() {
 
     const contents = [
         {
-            title: 'Những “báu vật nhân văn sống” có đang bị lãng quên?',
-            content: 'Dù di sản văn hóa phi vật thể được vinh danh ngày càng nhiều, nhưng những “báu vật nhân văn sống” đang dần bị lãng quên',
-            icon: faHouse
+            title: 'Nhiều nỗ lực trong bảo tồn di sản văn hóa tại Lâm Đồng',
+            content: 'Theo UBND tỉnh Lâm Đồng, trên địa bàn tỉnh hiện có 37 di tích được xếp hạng, ... ',
+            time: '4 ngày trước',
+            author: 'Báo Tiên Phong',
+            image: hd1,
+
         },
         {
-            title: 'Để văn hoá dân tộc không bị mai một',
-            content: 'Xưa khoai sắn đói chúng ta mới ăn nhưng giờ là đặc sản. Văn hóa dân gian cũng vậy. Văn hóa cần được giữ gìn bới chính cộng đồng',
-            icon: faBullhorn
+            title: 'Báo động nguy cơ thất truyền nhiều di sản văn hóa',
+            content: 'Ông Đào Trọng Thi cảnh báo: “Nhìn nhận một cách toàn diện thì công tác bảo tồn và phát huy giá trị di sản văn hóa ...',
+            time: '12 ngày trước',
+            author: 'Báo Tiên Phong',
+            image: hd2
         },
         {
-            title: 'Níu giữ những giá trị đang dần tan biến',
-            content: 'Đó là những đường nét điêu khắc đang bị thời gian tàn phá ;những diễn xướng dân gian truyền thống đang dần biến mất; không gian văn hóa đình làng dần thu hẹp... Tất cả vẫn còn hiện hữu, nhưng cũng đang dần tan biến',
-            icon: faPlane
+            title: 'Giới thiệu âm nhạc truyền thống cung đình tại Festival Huế 2022',
+            content: 'Trong khuôn khổ tuần lễ Festival Huế 2022 ...',
+            time: '20 ngày trước',
+            author: 'Báo Tiên Phong',
+            image: hd3
         },
         {
-            title: 'Chất keo gắn kết bằng tình yêu di sản',
-            content: 'Tình cảm đó được ươm mầm, nảy lộc đâm chồi từ điểm chung là giá trị nguyên bản của tình yêu di sản - vững bền hơn mọi thử thách!',
-            icon: faHandHoldingHeart
+            title: 'Thanh niên xứ Thanh chuyển đổi số quảng bá di tích lịch sử - văn hóa - du lịch ở Sầm Sơn',
+            content: 'TPO - Sáng 6/4, Tỉnh Đoàn Thanh Hóa đã tổ chức lễ ra mắt ... ',
+            time: '1 tháng trước',
+            author: 'Báo Tiên Phong',
+            image: hd4
         },
-        {
-            title: 'Bảo tồn: cấp thiết nhưng đừng vội, ẩu',
-            content: 'Những bước đi quá đà, ồ ạt. Lại có khi “bình cũ rượu mới” để tân trang lại nội dung mà không sao tránh khỏi kệch cỡm.',
-            icon: faBook
-        }
+
+
     ]
     return (
         <div className='wrap-section_core'>
             <div className='container'>
-                {/* <div className='content_top'>
-                    <h1>TIN TỨC NỔI BẬT</h1>
-                </div> */}
+
                 <div className='row row-center'>
 
                     <div className='col-lg-6'>
                         <div className='left_content'>
+                            <div className='news_top'>
+                                <h2>TIN TỨC NỔI BẬT</h2>
+                            </div>
                             {
                                 contents.map((item, index) => {
                                     return (
                                         <Link key={index} to='/news'>
-                                            <div className={`content_item ${index === 4 || index === 1 ? 'second-item' : ''}`}>
-                                                <div className='item-info'>
-                                                    <h3 className='item-title'>
-                                                        {item.title}
-                                                    </h3>
-                                                    <p>
-                                                        {item.content}
-                                                    </p>
-                                                </div>
-                                                <div className='content_icon'>
-                                                    <FontAwesomeIcon icon={item.icon} />
+                                            <div className={`content_item ${index === 0 ? 'second-item' : ''}`}>
+                                                <div className='row'>
+                                                    <div className='col-12 col-sm-7'>
+                                                        <div className='item-info'>
+                                                            <h3 className='item-title'>
+                                                                {item.title}
+                                                            </h3>
+                                                            <p>
+                                                                {item.content}
+                                                            </p>
+                                                            <div style={{ justifyContent: 'space-between' }} className='d-flex'>
+                                                                <p className='time_ago'>
+                                                                    {item.author}
+                                                                </p>
+                                                                <p className='time_ago'>
+                                                                    {item.time}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style={{ display: 'flex', alignItems: 'center' }} className='col-12 col-sm-5'>
+                                                        <div className='content_image'>
+                                                            <img className='img-link' src={item.image} alt="" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </Link>
                                     )
                                 })
                             }
+
+
                         </div>
                     </div>
 
@@ -71,6 +99,11 @@ function SectionCore() {
                         <div className='content-img'>
                             <img className='img-link' src={images} alt="" />
                         </div>
+                        <Link to='/news'>
+                            <h3 className='see_moreh3'>
+                                XEM THÊM
+                            </h3>
+                        </Link>
                     </div>
                 </div>
             </div>
