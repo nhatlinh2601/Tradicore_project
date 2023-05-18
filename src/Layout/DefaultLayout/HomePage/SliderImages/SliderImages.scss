@@ -3,26 +3,146 @@
 @import '/src/components/GlobalStyles/variables.scss';
 
 .slider-wrap {
-    background: linear-gradient(
-        rgb(215 176 153 / 69%),
-        rgb(186 194 200 / 53%),
-        rgb(170 187 208 / 89%),
-        rgb(98 158 151 / 78%)
-    );
-}
-.wrap-images {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    border-radius: 5px;
-
-    .img-link {
+    .wrapper_image {
+        position: relative;
         width: 100%;
+        overflow: hidden;
+        height: calc(100vh - 65px);
+        margin-top: 65px;
 
-        object-fit: cover;
-        object-position: center;
+        .wrap_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($color: black, $alpha: 0.5);
+            pointer-events: none;
+        }
+
+        .img-link {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .content_infor {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+
+            .prd_name {
+                font-size: 55px;
+                font-family: 'Texturina';
+                font-weight: 500;
+                opacity: 0;
+
+                animation-name: fadeInDown;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+            }
+
+            .prd_details {
+                margin: 40px 0;
+                width: 100%;
+                font-size: 16px;
+                font-family: 'Markazi Text';
+                font-size: 30px;
+                font-weight: 200;
+            }
+
+            .prd_more {
+                display: flex;
+                align-items: center;
+                margin: 36px 0;
+                transition: all 0.4s ease-in-out;
+
+                // :hover {
+                //     background-color: black;
+                // }
+            }
+            .prd_icon {
+                color: white;
+                background: transparent;
+                font-size: 26px;
+                transition: all 0.4s ease-in-out;
+                pointer-events: all;
+                cursor: pointer;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $primary-color;
+                }
+            }
+            .prd_years {
+                margin: 0 16px;
+                color: white;
+            }
+            .menu-start {
+                color: black;
+            }
+            .menu-btn {
+                padding: 5px 42px;
+                color: white;
+                font-family: 'Markazi Text';
+                font-size: 32px;
+                font-weight: 600;
+                background: #2f7c72;
+                border-radius: 120px;
+                margin: 0 40px;
+                transition: all 0.4s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.001);
+                    background-color: white;
+                    color: #333;
+                }
+            }
+        }
     }
 }
+
+.wrapper_image {
+    position: relative;
+}
+
+.prd_name,
+.prd_details {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.prd_name.show,
+.prd_details.show {
+    opacity: 1;
+}
+.menu-btn {
+    transform: scale(0);
+}
+
+.prd_details {
+    transform: translateY(20px);
+    transition: all 0.4s ease-in-out;
+}
+
+.prd_details.show {
+    transform: translateY(0);
+}
+.menu-btn.show {
+    transform: unset;
+}
+
+.prd_details.more {
+    margin: 2px;
+}
+// .show {
+//     opacity: 1;
+//     transform: translateY(0);
+// }
 
 // ---------------
 .slider_item {
@@ -81,7 +201,7 @@
             display: flex;
             align-items: center;
             margin: 36px 0;
-            transition: all 0.4s ease;
+            transition: all 0.4s ease-in-out;
 
             // :hover {
             //     background-color: black;
@@ -91,7 +211,7 @@
             color: grey;
             background: transparent;
             font-size: 22px;
-            transition: all 0.3s linear;
+            transition: all 0.3s ease-in-out;
             pointer-events: all;
 
             &:hover {
@@ -105,6 +225,17 @@
         .menu-start {
             color: black;
         }
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
     }
 }
 .slick-prev {
@@ -129,27 +260,30 @@
         height: 100%;
         margin-top: 36px;
     }
-    .left_item-content .left_item {
-        height: 100%;
-        background: transparent;
-        padding: 20px 0;
 
-        .prd_name1 {
-            font-size: 27px;
+    .content_infor {
+        top: 10% !important;
+        left: 6px !important;
+        transform: unset !important;
+        .prd_name {
+            font-size: 22px !important;
         }
-        .prd_name2 {
-            margin-bottom: 36px;
-        }
+
         .prd_details {
-            display: none;
+            font-size: 14px !important;
+            margin: 12px 0 !important;
         }
         .prd_more {
-            display: none;
+            margin: 0 0 36px 0;
         }
         .menu-btn {
-            margin: 0;
+            display: none !important;
+        }
+        .prd_icon {
+            font-size: 12px !important;
         }
     }
+
     .wrap-menu {
         // position: relative;
     }
@@ -164,7 +298,7 @@
 
         &::before {
             font-size: 12px;
-            color: black;
+            color: white;
         }
     }
     .slick-next {
@@ -173,9 +307,17 @@
 
         &::before {
             font-size: 12px;
-            color: black;
+            color: white;
         }
     }
+    .slider-wrap .wrapper_image {
+        height: 100%;
+        margin-top: 52px;
+    }
+}
+
+.content_infor {
+    position: absolute;
 }
 
 /* PC medium resolution > */
@@ -184,26 +326,20 @@
 
 /* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
-    .left_item-content {
-        .left_item {
-            margin-top: 30px;
+    .content_infor {
+        .prd_name {
+            font-size: 36px !important;
+        }
 
-            .prd_name1 {
-                font-size: 20px;
-            }
-            .prd_name2 {
-                font-size: 33px;
-            }
-            .prd_details {
-                width: 100%;
-                font-size: 14px;
-                margin: 24px 0;
-            }
-            .prd_more {
-                margin: 0 0 36px 0;
-            }
+        .prd_details {
+            font-size: 21px !important;
+            margin: 24px 0 !important;
+        }
+        .prd_more {
+            margin: 0 0 36px 0;
         }
     }
+
     .right_item {
         // width: 100%;
         height: 100%;
@@ -220,15 +356,18 @@
         left: 0px !important;
         &::before {
             font-size: 20px;
-            color: black;
+            color: white;
         }
     }
     .slick-next {
         right: 10px !important;
         &::before {
             font-size: 20px;
-            color: black;
+            color: white;
         }
+    }
+    .slider-wrap .wrapper_image {
+        height: 100%;
     }
 }
 
@@ -241,13 +380,13 @@
         .slick-prev {
             &::before {
                 font-size: 24px;
-                color: black;
+                color: white;
             }
         }
         .slick-next {
             &::before {
                 font-size: 24px;
-                color: black;
+                color: white;
             }
         }
     }

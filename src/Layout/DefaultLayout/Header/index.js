@@ -44,13 +44,13 @@ function Header() {
 
 
                                 <li className='menu_item'>
-                                    <Link to="/volunteering"> Volunteering </Link>
+                                    <Link to="/volunteering"> Hoạt động tình nguyện </Link>
                                 </li>
                                 <li className='menu_item'>
-                                    <Link to="/news"> News </Link>
+                                    <Link to="/news"> Tin tức </Link>
                                 </li>
                                 <li className='menu_item'>
-                                    <Link to="/tradicoreSocial"> TRADICORE Social </Link>
+                                    <Link to="/tradicoreSocial"> Mạng xã hội </Link>
                                 </li>
                                 {/* <li className='menu_item'>
                                     <Link to="/tours"> Tour </Link>
@@ -64,10 +64,10 @@ function Header() {
                         <div className='menu-actions'>
                             <div className='menu-btns d-none d-md-block'>
                                 <Button className='menu-btn' text to={"/login"} leftIcon={<FontAwesomeIcon icon={faRightToBracket} />}>
-                                    Log in
+                                    Đăng nhập
                                 </Button>
                                 <Button className='menu-btn' text to={"/register"} leftIcon={<FontAwesomeIcon icon={faDownload} />}>
-                                    Register
+                                    Đăng ký
                                 </Button>
                             </div>
 

@@ -278,3 +278,21 @@
         }
     }
 }
+
+@media (max-width: 739px) {
+    .content_top h1 {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    .content_top p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+    .content_top h1 {
+        margin-top: 30px;
+    }
+    .content_top p {
+        margin-top: 30px;
+    }
+}
