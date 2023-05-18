@@ -3,14 +3,16 @@ import SectionCore from "./SectionCore";
 import SliderComment from "./SliderComment";
 import AlbumCpn from "./AlbumCpn";
 import ApplyVolunteer from "./ApplyVolunteer";
+import Tours from "./Tours";
 function HomePage() {
     return (
         <>
             <SliderImages />
             <AlbumCpn />
-            <SliderComment />
-            <SectionCore />
             <ApplyVolunteer />
+            <SectionCore />
+            {/* <SliderComment /> */}
+            <Tours />
 
         </>
     );

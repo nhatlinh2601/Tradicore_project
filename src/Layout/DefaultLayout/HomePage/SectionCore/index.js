@@ -45,16 +45,16 @@ function SectionCore() {
 
     ]
     return (
-        <div className='wrap-section_core'>
+        <div style={{ paddingTop: '30px' }} className='wrap-section_core'>
             <div className='container'>
-
+                {/* <div className='news_top'>
+                    <h2>TIN TỨC NỔI BẬT</h2>
+                </div> */}
                 <div className='row row-center'>
 
                     <div className='col-lg-6'>
                         <div className='left_content'>
-                            <div className='news_top'>
-                                <h2>TIN TỨC NỔI BẬT</h2>
-                            </div>
+
                             {
                                 contents.map((item, index) => {
                                     return (

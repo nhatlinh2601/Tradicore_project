@@ -1,6 +1,7 @@
 @import '/src/components/GlobalStyles/variables.scss';
 .wrapperAlb {
     position: relative;
+    padding-bottom: 55px;
 }
 .content_top {
     p {
@@ -13,7 +14,7 @@
     h1 {
         font-family: $second-font;
         font-size: 50px;
-        margin-top: 80px;
+        margin-top: 50px;
     }
 
     .btn-explore {

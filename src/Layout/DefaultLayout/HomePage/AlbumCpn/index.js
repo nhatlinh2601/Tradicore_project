@@ -4,14 +4,14 @@ import Slider from "react-slick";
 import './AlbumCom.scss'
 import Button from '~/components/Button'
 import image1 from '~/assets/images/img-khoAnh/congChieng.jpg'
-import image2 from '~/assets/images/img-khoAnh/lamGom.png'
-import image3 from '~/assets/images/img-khoAnh/muaRoiNuoc.jpg'
+import image2 from '~/assets/images/img-khoAnh/lamGom1.jpg'
+import image3 from '~/assets/images/img-khoAnh/muaRoiNuoc1.jpg'
 import image4 from '~/assets/images/img-khoAnh/suThiTN.jpg'
 import image5 from '~/assets/images/img-khoAnh/tranhSonMai.jpg'
 import image6 from '~/assets/images/img-khoAnh/toHe.jpg'
-import image7 from '~/assets/images/img-khoAnh/hatXam.jpg'
-import image8 from '~/assets/images/img-khoAnh/trangPhuc.jpg'
-import image9 from '~/assets/images/img-khoAnh/tranhDongHo.jpg'
+import image7 from '~/assets/images/img-khoAnh/hatXam1.jpg'
+import image8 from '~/assets/images/img-khoAnh/trangPhuc1.jpg'
+import image9 from '~/assets/images/img-khoAnh/tranhDongHo1.jpg'
 import account1 from '~/assets/images/img-content/acc1.jpg'
 import account2 from '~/assets/images/img-content/acc2.jpg'
 import account3 from '~/assets/images/img-content/acc3.jpg'
@@ -64,24 +64,6 @@ function AlbumCpn() {
 
     },
     {
-      image: image4,
-      name: 'Sử thi Tây Nguyên',
-      list: SliderSuThi,
-      box: suThi
-    },
-    {
-      image: image5,
-      name: '	Nghệ thuật Sơn mài',
-      list: SliderSonMai,
-      box: sonMai
-    },
-    {
-      image: image6,
-      name: 'Nghệ thuật tò he',
-      list: SliderToHe,
-      box: toHe
-    },
-    {
       image: image7,
       name: 'Nghệ thuật hát xẩm',
       list: SliderHatXam,
@@ -99,6 +81,25 @@ function AlbumCpn() {
       list: SliderTranh,
       box: tranhDH
     },
+    {
+      image: image4,
+      name: 'Sử thi Tây Nguyên',
+      list: SliderSuThi,
+      box: suThi
+    },
+    {
+      image: image5,
+      name: '	Nghệ thuật Sơn mài',
+      list: SliderSonMai,
+      box: sonMai
+    },
+    {
+      image: image6,
+      name: 'Nghệ thuật tò he',
+      list: SliderToHe,
+      box: toHe
+    },
+
   ]
 
 
@@ -174,7 +175,7 @@ function AlbumCpn() {
                       <Button onClick={() => {
                         setIsShowing(true);
                         setSelectedImageIndex(index)
-                      }} text className={'btn-quickView'}>Quick View</Button>
+                      }} text className={'btn-quickView'}>Xem thêm</Button>
                     </div>
                   </div>
                 )
