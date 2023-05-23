@@ -1,0 +1,138 @@
+.form_wrap {
+    color: #333;
+    margin-top: 65px;
+    background: #ccdfdb;
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+    .form_content {
+        color: #333;
+        background: white;
+        border-radius: 20px;
+        margin: 40px 0;
+
+        .btn_dk {
+            color: white;
+            background: #2f7c72;
+            padding: 10px 24px;
+            border-radius: 10px;
+            font-family: 'Poppins';
+            font-weight: 500;
+            float: right;
+            margin-right: 60px;
+            margin-bottom: 20px;
+        }
+        .form_left {
+            margin: 12px;
+            background: rgb(204 204 204 / 24%);
+            border-radius: 5px;
+            height: calc(100% - 24px);
+
+            button {
+                color: #2f7c72;
+                font-size: 40px;
+            }
+            h1 {
+                color: #333;
+                font-family: 'Markazi Text';
+                font-size: 36px;
+                margin: 60px 0 100px 0;
+            }
+            p {
+                color: #333;
+            }
+
+            .form_left-box {
+                background: #2d3345;
+                border-radius: 10px;
+
+                p {
+                    color: #ffffffb0;
+                }
+
+                .acc {
+                    color: rgba(255, 255, 255, 0.6901960784);
+                    display: flex;
+                    align-items: center;
+                    margin: 16px 0;
+                    .img_wrap {
+                        color: #333;
+                        width: 50px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin-right: 20px;
+                        .img-link {
+                            color: #333;
+                        }
+                    }
+                }
+                .acc_name {
+                    color: #ffffffb0;
+                }
+                .acc_product {
+                    color: #ffffffb0;
+                }
+            }
+        }
+    }
+}
+.form_dk {
+    color: #333;
+    font-family: math;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.right_ct {
+    padding-left: 20px;
+    padding-right: 40px;
+}
+.form-group {
+    color: #333;
+    margin: 24px 0;
+
+    label {
+        margin: 4px 0;
+        font-weight: 500;
+        font-family: math;
+        font-size: 18px;
+    }
+    .form-control {
+        color: #333;
+        font-size: 20px;
+        padding: 8px;
+    }
+    .form-text {
+        color: #e74c3c !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .form_wrap {
+        height: 100%;
+        margin-top: 52px;
+        padding: 50px 0;
+
+        .form-group {
+            margin: 8px 0;
+        }
+        .form_dk {
+            h1 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .form_wrap .form_content .btn_dk {
+        margin: 40px 0;
+        margin-right: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+    .form_wrap .form_content .btn_dk {
+        margin-bottom: 40px;
+    }
+}
