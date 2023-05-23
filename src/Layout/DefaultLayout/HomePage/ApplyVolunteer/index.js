@@ -58,7 +58,7 @@ function ApplyVolunteer() {
 
                                 </Button>
                             </div>
-                            <div style={{ marginTop: '60px', float: 'right' }}><Button large text rightIcon={<FontAwesomeIcon icon={faUpLong} />}>THAM GIA</Button></div>
+                            <div style={{ marginTop: '60px', float: 'right' }}><Button to='/volunteering/form' large text rightIcon={<FontAwesomeIcon icon={faUpLong} />}>THAM GIA</Button></div>
                         </div>
                     </div>
                 </div>

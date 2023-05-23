@@ -31,7 +31,7 @@ function SliderImages() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         beforeChange: (current, next) => {
             setCurrentSlide(next);
             setShowCaption(false);
@@ -45,7 +45,7 @@ function SliderImages() {
                 setTimeout(() => {
                     setShowButton(true);
                 }, 600);
-            }, 600);
+            }, 800);
         },
     };
 
@@ -57,7 +57,7 @@ function SliderImages() {
             setTimeout(() => {
                 setShowButton(true);
             }, 600);
-        }, 600);
+        }, 800);
 
 
     }, []);

@@ -89,13 +89,13 @@
     h1 {
         font-family: 'Roboto';
         font-size: 45px;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 1.4;
-        color: #333333;
+        color: #333;
     }
     h2 {
-        color: black;
-        font-size: 40px;
+        color: rgba(0, 0, 0, 0.718);
+        font-size: 36px;
         font-family: 'Markazi Text';
         margin: 30px 0;
     }
@@ -115,7 +115,7 @@
     color: white;
     font-family: 'Markazi Text';
     float: right;
-    margin-top: 20px;
+    margin-top: 40px;
     font-weight: 600;
     margin-right: 60px;
     transition: all 0.4s linear;
@@ -124,64 +124,66 @@
         background-color: #333333;
         color: white;
         cursor: pointer;
-        transform: scale(1.05);
     }
 }
 
 .volun_curren {
-    background-image: url(./bg-img.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-bottom: 80px;
     position: relative;
+    background-color: #ccdfdb;
+    padding-bottom: 60px;
 }
 .curren_title {
-    color: #000000b8;
-    font-family: 'Roboto';
-    font-size: 50px;
+    color: rgba(0, 0, 0, 0.7215686275);
+    font-family: 'Markazi Text';
+    font-size: 60px;
     font-weight: 600;
     padding: 60px 0;
     position: relative;
 }
 .box_event {
     color: black;
-    padding: 24px;
-    border: 2px solid white;
+    margin: 0 16px;
+    border: 2px solid transparent;
     font-family: 'Roboto';
     margin-bottom: 8px;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
     position: relative;
-    background: white;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 
     &:hover {
         border: 2px solid $primary-color;
-        transform: scale(1.02);
+        // transform: scale(1.01);
         cursor: pointer;
+
+        img {
+            transform: scale(1.05);
+        }
     }
     .box_image {
         width: 100%;
         height: 100%;
         overflow: hidden;
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
+            transition: all 0.3s linear;
         }
     }
     h2 {
-        color: black;
-        font-size: 24px;
-        margin: 20px 0;
+        color: #333;
+        font-size: 32px;
         font-weight: 500;
+        font-family: 'Markazi Text';
     }
     p {
-        color: #000000b5;
-        font-size: 18px;
+        color: rgba(0, 0, 0, 0.7098039216);
+        font-size: 16px;
         text-align: justify;
-        margin: 20px 0;
+        margin: 8px 0;
     }
     .place {
         color: black;
@@ -192,7 +194,7 @@
     button {
         background: #2f7c72;
         color: white;
-        padding: 8px 24px;
+        padding: 6px 28px;
         border-radius: 100px;
         font-size: 20px;
         /* margin: 20px 0; */
@@ -269,9 +271,226 @@
     }
 }
 
-@media (min-width: 740px) and (max-width: 1023px) {
+.organiz_description {
+    color: #333;
+    padding-right: 150px;
+    h1 {
+        color: #333;
+        font-family: 'Markazi Text';
+        font-size: 80px;
+    }
+    p {
+        color: #333;
+        font-size: 20px;
+        font-family: math;
+        margin: 24px 0;
+    }
 }
-@media (max-width: 540px) {
+.og_box {
+    color: #333;
+    button {
+        color: #333;
+        font-size: 50px;
+    }
+    h2 {
+        color: #333;
+        font-size: 38px;
+        font-family: math;
+        font-weight: 800;
+        /* margin: 30px 0; */
+        margin-top: 30px;
+    }
+    p {
+        color: #333;
+        margin: 10px 0;
+        font-family: math;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+.og_box-top {
+    color: #333;
+    background: beige;
+    border-radius: 20px;
+    height: 140px;
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: whitesmoke;
+        font-family: 'Markazi Text';
+        font-size: 40px;
+    }
+    p {
+        color: #333;
+    }
+}
+.og_box-left {
+    color: #333;
+    background: grey;
+    height: 140px;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+.mid_box {
+    color: #333;
+    height: 100%;
+    background: #ccc;
+    /* margin: 20px 0; */
+    border-radius: 20px;
+
+    h1 {
+        color: #333;
+        font-weight: 500;
+    }
+    p {
+        color: #333;
+        margin: 16px 0;
+    }
+    button {
+        color: #333;
+        font-size: 36px;
+        text-align: center;
+        width: 100%;
+    }
+}
+.og_box-right {
+    color: #333;
+    background: antiquewhite;
+    height: 140px;
+    margin: 40px 20px;
+    border-radius: 20px;
+}
+.m-r {
+    margin-right: 5px !important;
+}
+.m {
+    margin: 40px 0;
+}
+.m-t-15 {
+    margin-top: 15px !important;
+}
+
+.action_modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    .action_overlay {
+        position: fixed;
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.6;
+    }
+    .action_md-content {
+        color: #333;
+        position: relative;
+
+        .icon_close {
+            color: #ffffffb0;
+            position: absolute;
+            top: -50px;
+            right: 0;
+            z-index: 99;
+            font-size: 36px;
+        }
+        .slider_image {
+            color: #333;
+            .div-img {
+                color: #333;
+
+                .img-link {
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+.slick-dots li {
+    width: 60px;
+    height: 60px;
+}
+.slick-dots {
+    position: absolute;
+    bottom: -60px;
+}
+.div_img {
+    max-height: 700px;
+    overflow: hidden;
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+    .m {
+        margin: 8px 0;
+    }
+    .m-r {
+        margin-right: -15px !important;
+    }
+    .organiz_description {
+        padding: 0;
+    }
+    .box_event {
+        margin: 6px 0 !important;
+    }
+    .og_box-top,
+    .og_box-left,
+    .og_box-right {
+        margin: 7.5px 0;
+    }
+
+    .og_box-top {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .m {
+        margin: 8px 0;
+    }
+    .m-r {
+        margin-right: -15px !important;
+    }
+    .curren_title {
+        font-size: 40px;
+        padding: 30px 0;
+    }
+    .volun_organizations {
+        padding: 20px 0 !important;
+    }
+    .organiz_description {
+        padding: 0;
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    .og_box {
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+
     .volun_overlay {
         top: $default-layout-header-height-mobile-ipad;
     }
@@ -307,6 +526,27 @@
     .volun_foot {
         height: calc(100vh - $default-layout-header-height-mobile-ipad);
     }
+    .box_event {
+        margin: 6px 0 !important;
+    }
+    .og_box-top,
+    .og_box-left,
+    .og_box-right {
+        margin: 7.5px 0;
+    }
+    .og_box-left:nth-child(2) {
+        margin-right: -15px !important;
+    }
+    .og_box-top {
+        margin-top: 20px;
+    }
+
+    .title {
+        h1,
+        h2 {
+            font-size: 28px;
+        }
+    }
 }
 @media (max-width: 1024px) {
     .title p {
@@ -314,5 +554,10 @@
     }
     .btn_next {
         margin-right: 0;
+    }
+}
+@media (max-width: 576px) {
+    .box_event {
+        margin: 4px 0 !important;
     }
 }

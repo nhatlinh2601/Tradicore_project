@@ -8,6 +8,7 @@ import TradicoreSocial from '~/pages/TradicoreSocial';
 import Tours from '~/pages/Tours';
 import Profile from '~/Layout/DefaultLayout/TradicoreSocial/profile/Profile';
 import EditProfile from '~/Layout/DefaultLayout/TradicoreSocial/editprofile/EditProfile';
+import FormVolunteer from '~/pages/FormVolunteer';
 
 
 const publicRoutes = [
@@ -57,6 +58,11 @@ const publicRoutes = [
         path: '/volunteering/actions',
         component: Profile,
         layout: null
+    },
+    {
+        path: '/volunteering/form',
+        component: FormVolunteer,
+
     },
 
 ];

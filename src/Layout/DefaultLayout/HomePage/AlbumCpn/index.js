@@ -119,7 +119,7 @@ function AlbumCpn() {
     {
       id: 2,
       content: 'Cám ơn bạn đã chia sẻ!',
-      author: 'John Doe',
+      author: 'Joshua Hong',
       time: '10 minutes ago',
       image: account2
     },
