@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import background from '~/assets/images/img-volunteer/bg.webp'
 import banDo from '~/assets/images/img-volunteer/hoatDong/banDo.png'
-import dongHanh from '~/assets/images/img-volunteer/hoatDong/dongHanh.jpg'
 import VolunteerAction from './VolunteerAction'
 import { Element } from 'react-scroll';
 import './Volunteering.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { tinhThanh } from './data'
-import { faHeart, faHandHoldingHeart, faPeopleGroup, faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faHandHoldingHeart, faPeopleGroup, faHouse, faL, faShieldHeart, faEarth, faGlobe, faSchool } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 
 
 
 function Volunteering() {
+
+
+
     return (
         <div id='top' className='volun_wrapp'>
             <div className='volun_content'>
@@ -81,10 +83,24 @@ function Volunteering() {
                                 </div>
                                 <div className='row col-12'>
                                     <div className='col-6'>
-                                        <div style={{ background: 'antiquewhite' }} className='og_box-left'>this box</div>
+                                        <div style={{ background: 'antiquewhite' }} className='og_box-left'>
+                                            <div className='box_overlay'>
+                                                <h1>Trung tâm Quản lý Bảo tồn Di sản Văn hóa</h1>
+                                            </div>
+                                            <button>
+                                                <FontAwesomeIcon icon={faShieldHeart} />
+                                            </button>
+                                        </div>
                                     </div>
                                     <div className='col-6'>
-                                        <div style={{ background: '#ccdfdb' }} className='og_box-left m-r'>this box</div>
+                                        <div style={{ background: '#ccdfdb' }} className='og_box-left m-r'>
+                                            <div className='box_overlay'>
+                                                <h1>Trung tâm Quản lý Bảo tồn Di sản Văn hóa</h1>
+                                            </div>
+                                            <button>
+                                                <FontAwesomeIcon icon={faEarth} />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -102,10 +118,30 @@ function Volunteering() {
                             </div>
                             <div className='col-12 col-sm-8 col-xl-5'>
                                 <div className='col-12'>
-                                    <div style={{ background: '#ccdfdb' }} className='og_box-right'>this box</div>
+                                    <div style={{ display: 'flex', alignItems: 'center', background: '#ccdfdb' }} className='og_box-right'>
+                                        <div style={{ display: 'flex', alignItems: 'center' }} className='row'>
+                                            <div style={{ display: 'flex', alignItems: 'center' }} className='col-8'><h1 >Trung tâm Xúc tiến, Quảng bá di sản văn hóa phi vật thể Việt Nam.</h1></div>
+                                            <div style={{ display: 'flex', alignItems: 'center' }} className='col-4'>
+                                                <button>
+                                                    <FontAwesomeIcon icon={faGlobe} />
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                                 <div className='col-12'>
-                                    <div style={{ background: 'antiquewhite' }} className='og_box-right m-t-15'>this box</div>
+                                    <div style={{ display: 'flex', alignItems: 'center', background: 'antiquewhite' }} className='og_box-right m-t-15'>
+                                        <div style={{ display: 'flex', alignItems: 'center' }} className='row'>
+                                            <div style={{ display: 'flex', alignItems: 'center' }} className='col-8'><h1 >Tổ chức giáo dục ý thức bảo vệ di sản văn hóa cho thế hệ trẻ.</h1></div>
+                                            <div style={{ display: 'flex', alignItems: 'center' }} className='col-4'>
+                                                <button>
+                                                    <FontAwesomeIcon icon={faSchool} />
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +165,7 @@ function Volunteering() {
                                         <div className='title'>
                                             <h1>Ở ĐÂU CÓ CÁC BẠN, <span>Ở ĐÓ CÓ CHÚNG TÔI</span> </h1>
                                             <h2>TRADICORE -  ĐỒNG HÀNH TRÊN MỌI NẺO ĐƯỜNG</h2>
-                                            <p>Tradicore luôn là sự lựa chọn hàng đầu với các hoạt động tình nguyện baor vệ di sản, gìn giữ cộng đồng với các tổ chức, clb, đội nhóm uy tín trên khắp đất nước.</p>
+                                            <p>Tradicore luôn là sự lựa chọn hàng đầu với các hoạt động tình nguyện bảo vệ di sản, gìn giữ cộng đồng với các tổ chức, clb, đội nhóm uy tín trên khắp đất nước.</p>
                                         </div>
                                         <div class="mb-3">
                                             <select class="content_select form-select form-select-lg" name="" id="">
@@ -156,7 +192,7 @@ function Volunteering() {
                 </div>
 
 
-                <div className='volun_foot'>
+                {/* <div className='volun_foot'>
                     <div className='foot_overlay'></div>
                     <div className='wrap_img'>
                         <img className="img-link" src={dongHanh} />
@@ -181,7 +217,7 @@ function Volunteering() {
                         </div>
                     </div>
 
-                </div>
+                </div> */}
 
             </div>
         </div>

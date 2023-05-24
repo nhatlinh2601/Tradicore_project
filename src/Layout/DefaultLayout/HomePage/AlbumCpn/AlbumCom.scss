@@ -73,7 +73,7 @@
 .modal-alb {
     position: fixed;
     width: 100%;
-    height: 100vh;
+
     top: 0;
     left: 0;
     z-index: 9999999;
@@ -130,7 +130,7 @@
 .div-img {
     height: 680px;
     overflow: hidden;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
 }
 
 .close-icon {
@@ -171,6 +171,23 @@
     }
     .top p {
         font-size: 12px;
+    }
+    .close-icon {
+        right: 4px;
+        top: 0;
+        color: #000;
+    }
+}
+@media (min-width: 576px) {
+    .modal-alb {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .div-img {
+        margin-top: 7px;
+        margin-left: 6px;
     }
 }
 

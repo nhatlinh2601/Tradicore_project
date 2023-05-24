@@ -42,7 +42,7 @@ function Tours() {
     ]
     return (
         <div className='tours_wrap'>
-            <div style={{ padding: '0px 100px' }} className='container'>
+            <div style={{ padding: '0px 100px', overflow: 'hidden' }} className='container'>
                 <h1 className='title'>SỰ KIỆN CÓ THỂ BẠN QUAN TÂM </h1>
                 <div className='row'>
                     <div className='col-12 col-sm-12 col-xl-6'>
@@ -51,7 +51,7 @@ function Tours() {
                                 <div className='wrap_img'>
                                     <img className='img-link' src={hoiAn} alt="" />
                                 </div>
-                                <div style={{ padding: '29px' }} className='tours_infor'>
+                                <div style={{ padding: '30px' }} className='tours_infor'>
                                     <h2 className='big'>Đưa nhau đi trốn đến Hội An ngắm đêm hội Trung Thu ngay thôi!</h2>
                                     <h1 className='big' >Tết Trung thu</h1>
                                     {<p className='big'> Hội An trở nên đẹp lộng lẫy, cực kỳ náo nhiệt với nhiều hoạt động thi vị cho đêm hội Trăng rằm. </p>}

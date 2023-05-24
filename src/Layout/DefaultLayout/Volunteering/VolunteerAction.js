@@ -2,18 +2,39 @@ import React from 'react'
 import './Volunteering.scss'
 import { useState } from 'react'
 import Slider from 'react-slick'
-import hd1 from '~/assets/images/img-volunteer/hoatDong/hd6.jpg'
-import hd2 from '~/assets/images/img-volunteer/hoatDong/hd5.jpg'
-import hd3 from '~/assets/images/img-volunteer/hoatDong/hd3.jpg'
+import hd1 from '~/assets/images/img-volunteer/hoatDong/list1/1.jpg'
+import hd2 from '~/assets/images/img-volunteer/hoatDong/list1/2.jpg'
+import hd3 from '~/assets/images/img-volunteer/hoatDong/list1/3.jpg'
+import hd4 from '~/assets/images/img-volunteer/hoatDong/list1/hd4.jpg'
+import hd5 from '~/assets/images/img-volunteer/hoatDong/list1/5.jpg'
+import hd6 from '~/assets/images/img-volunteer/hoatDong/list1/6.jpg'
+
+
+import l1 from '~/assets/images/img-volunteer/hoatDong/list2/1.jpeg'
+import l2 from '~/assets/images/img-volunteer/hoatDong/list2/2.jpeg'
+import l3 from '~/assets/images/img-volunteer/hoatDong/list2/3.jpeg'
+import l4 from '~/assets/images/img-volunteer/hoatDong/list2/4.jpeg'
+import l5 from '~/assets/images/img-volunteer/hoatDong/list2/5.jpg'
+import l6 from '~/assets/images/img-volunteer/hoatDong/list2/6.jpeg'
+
+import i1 from '~/assets/images/img-volunteer/hoatDong/list3/1.jpg'
+import i2 from '~/assets/images/img-volunteer/hoatDong/list3/2.jpg'
+import i3 from '~/assets/images/img-volunteer/hoatDong/list3/3.jpg'
+import i4 from '~/assets/images/img-volunteer/hoatDong/list3/4.jpg'
+import i5 from '~/assets/images/img-volunteer/hoatDong/list3/5.jpg'
+
+
+import langBan from '~/assets/images/img-volunteer/hoatDong/1.jpg'
+
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 function VolunteerAction() {
 
-    const images1 = [hd1, hd1, hd1]
-    const images2 = [hd2, hd2, hd2]
-    const images3 = [hd3, hd3, hd3]
+    const images1 = [hd1, hd2, hd3, hd4, hd5, hd6]
+    const images2 = [l2, l3, l1, l4, l5, l6]
+    const images3 = [i5, i2, i3, i4, i1]
 
     const settings1 = {
         customPaging: function (i) {
@@ -68,32 +89,33 @@ function VolunteerAction() {
 
     const data = [
         {
-            name: 'Hành trình địa chỉ đỏ',
-            description: 'Trong những tình huống đặc biệt, người làm báo Hà TĩnhTrong những tình huống đặc biệt, người làm báo Hà Tĩnh',
-            place: 'Ha Noi',
-            time: '27/4 - 24/5',
+            name: 'Chương trình "Về với làng bản" - Sapa, Lào Cai',
+            description: 'Du lịch tình nguyện, trồng cây, chăm sóc nông trại, học văn hóa truyền thống, tham quan các làng bản và giúp đỡ những hoàn cảnh khó khăn.',
+            place: 'Sapa, Lào Cai',
+            time: 'T1/2',
             image: hd1,
             list: images1,
             custom: settings1,
         },
         {
-            name: 'Hành trình địa chỉ đỏ',
-            description: 'Trong những tình huống đặc biệt, người làm báo Hà TĩnhTrong những tình huống đặc biệt, người làm báo Hà Tĩnh',
-            place: 'Ha Noi',
-            time: '27/4 - 24/5',
-            image: hd2,
-            list: images2,
-            custom: settings2,
-        },
-        {
-            name: 'Hành trình địa chỉ đỏ',
-            description: 'Trong những tình huống đặc biệt, người làm báo Hà TĩnhTrong những tình huống đặc biệt, người làm báo Hà Tĩnh',
-            place: 'Ha Noi',
-            time: '27/4 - 24/5',
-            image: hd3,
+            name: 'Tình nguyện viên bảo tồn di sản Đồng Văn - Hà Giang',
+            description: 'Tập trung xây dựng lối kiến trúc truyền thống tại các làng văn hóa du lịch cộng đồng tại 4 huyện cao nguyên đá nhằm bảo tồn và phát triển',
+            place: 'Đồng Văn',
+            time: 'T10',
+            image: i1,
             list: images3,
             custom: settings3,
         },
+        {
+            name: 'Trại hè tình nguyện Bản Cỏi - Phú Thọ',
+            description: '“Đi tình nguyện để thấy mình trưởng thành hơn, đi tình nguyện để cảm nhận được sự ấm áp của tình đồng đội, và hơn hết, đi tình nguyện là để thêm yêu Tổ quốc mình hơn”.',
+            place: 'Phú Thọ',
+            time: '24/6 - 30/6',
+            image: l1,
+            list: images2,
+            custom: settings2,
+        },
+
     ]
 
     const [selectedImageIndex, setSelectedImageIndex] = useState(1);

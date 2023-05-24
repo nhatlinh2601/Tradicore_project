@@ -76,7 +76,7 @@
 }
 
 .volun_reach {
-    background: #f6f6f6;
+    // background: #f6f6f6;
 }
 .reach_content {
     padding: 80px 0;
@@ -329,12 +329,75 @@
     }
 }
 .og_box-left {
+    position: relative;
     color: #333;
     background: grey;
     height: 140px;
     border-radius: 20px;
     margin: 0 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .box_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
 }
+
+.og_box-left:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(28, 26, 28, 0.8);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fadeIn 0.3s forwards;
+    cursor: pointer;
+}
+
+.og_box-left:hover h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.og_box-left h1 {
+    font-size: 24px;
+    font-family: 'Markazi Text';
+    padding: 0 12px;
+    color: white;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.og_box-left button {
+    color: #333;
+    font-family: 'Markazi Text';
+    font-size: 60px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: unset;
+    }
+}
+
 .mid_box {
     color: #333;
     height: 100%;
@@ -363,7 +426,33 @@
     height: 140px;
     margin: 40px 20px;
     border-radius: 20px;
+    overflow: hidden;
+
+    h1 {
+        color: #333333;
+
+        font-family: 'Markazi Text';
+        padding-left: 20px;
+        text-align: justify;
+    }
+    button {
+        color: #333;
+        font-size: 60px;
+        text-align: center;
+        width: 100%;
+        // animation: rotate 2s infinite linear;
+    }
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .m-r {
     margin-right: 5px !important;
 }
@@ -409,6 +498,12 @@
             right: 0;
             z-index: 99;
             font-size: 36px;
+
+            &:hover {
+                color: white;
+                transform: scale(1.01);
+                cursor: pointer;
+            }
         }
         .slider_image {
             color: #333;
@@ -529,6 +624,7 @@
     .box_event {
         margin: 6px 0 !important;
     }
+
     .og_box-top,
     .og_box-left,
     .og_box-right {

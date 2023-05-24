@@ -141,3 +141,8 @@ a .second-item {
         padding: 14px 4px;
     }
 }
+@media (max-width: 576px) {
+    a .content_item .item-info {
+        margin-right: 0;
+    }
+}
