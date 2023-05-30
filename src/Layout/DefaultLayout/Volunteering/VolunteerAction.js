@@ -132,7 +132,7 @@ function VolunteerAction() {
             <div className='container'>
 
                 <h1 className='curren_title'>HOẠT ĐỘNG SẮP TỚI</h1>
-                <div className='row'>
+                <div style={{ marginLeft: '-20px', marginRight: '-20px' }} className='row'>
 
 
                     {

@@ -219,6 +219,10 @@ header {
     }
 }
 
+.active {
+    color: $primary-color;
+}
+
 @media (max-width: 739px) {
     html {
         font-size: 50%;

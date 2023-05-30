@@ -1,6 +1,10 @@
+import New from '~/Layout/DefaultLayout/News'
+
 function News() {
     return (
-        <h2>News</h2>
+        <>
+            <New />
+        </>
     );
 }
 

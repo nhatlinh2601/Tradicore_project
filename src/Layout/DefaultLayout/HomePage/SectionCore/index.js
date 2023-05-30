@@ -25,14 +25,14 @@ function SectionCore() {
             content: 'Ông Đào Trọng Thi cảnh báo: “Nhìn nhận một cách toàn diện thì công tác bảo tồn và phát huy giá trị di sản văn hóa ...',
             time: '12 ngày trước',
             author: 'Báo Tiên Phong',
-            image: hd2
+            image: hd3
         },
         {
             title: 'Giới thiệu âm nhạc truyền thống cung đình tại Festival Huế 2022',
             content: 'Trong khuôn khổ tuần lễ Festival Huế 2022 ...',
             time: '20 ngày trước',
             author: 'Báo Tiên Phong',
-            image: hd3
+            image: hd2
         },
         {
             title: 'Thanh niên xứ Thanh chuyển đổi số quảng bá di tích lịch sử - văn hóa - du lịch ở Sầm Sơn',

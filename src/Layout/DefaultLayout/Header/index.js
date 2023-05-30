@@ -9,21 +9,23 @@ import './Header.scss'
 
 
 function Header() {
+    const [activeItem, setActiveItem] = useState('');
 
+    const handleItemClick = (item) => {
+        setActiveItem(item);
+    };
 
-    const [isBoxOpen, setIsBoxOpen] = useState(false);
+    const handleLinkClick = () => {
+        setActiveItem('');
+    };
+
     const handleButtonClick = () => {
         setIsBoxOpen(!isBoxOpen);
     };
 
-    // Xử lý sự kiện click trên mỗi thẻ <a> để ẩn hộp box đi khi chuyển trang
-    const handleLinkClick = () => {
-        setIsBoxOpen(false);
-    };
-
+    const [isBoxOpen, setIsBoxOpen] = useState(false);
 
     return (
-
         <header>
             <div className='wrap-menu'>
                 <div className='container'>
@@ -32,45 +34,52 @@ function Header() {
                             <div className='menu-logo'>
                                 <button onClick={() => window.scrollTo(0, 0)} className='menu-logo_icon'>
                                     <Link to="/">
-                                        <FontAwesomeIcon icon={faEarth} /> </Link>
+                                        <FontAwesomeIcon icon={faEarth} />
+                                    </Link>
                                 </button>
                                 <li onClick={() => window.scrollTo(0, 0)} className='menu-logo_title'>
-                                    <Link to="/"> TRADICORE </Link>
+                                    <Link to="/">TRADICORE</Link>
                                 </li>
-
                             </div>
 
                             <div className="menu_list d-none d-xl-flex">
-
-
-                                <li className='menu_item'>
-                                    <Link to="/volunteering"> Hoạt động tình nguyện </Link>
+                                <li className={`menu_item ${activeItem === 'volunteering' ? 'active' : ''}`} onClick={() => handleItemClick('volunteering')}>
+                                    <Link to="/volunteering" onClick={() => handleItemClick('volunteering')}>
+                                        Hoạt động tình nguyện
+                                    </Link>
                                 </li>
-                                <li className='menu_item'>
-                                    <Link to="/news"> Tin tức </Link>
+                                <li className={`menu_item ${activeItem === 'news' ? 'active' : ''}`} onClick={() => handleItemClick('volunteering')}>
+                                    <Link to="/news" onClick={() => handleItemClick('news')}>
+                                        Tin tức
+                                    </Link>
                                 </li>
-                                <li className='menu_item'>
-                                    <Link to="/tradicoreSocial"> Mạng xã hội </Link>
+                                <li className={`menu_item ${activeItem === 'tradicoreSocial' ? 'active' : ''}`} onClick={() => handleItemClick('volunteering')}>
+                                    <Link to="/tradicoreSocial" onClick={() => handleItemClick('tradicoreSocial')}>
+                                        Mạng xã hội
+                                    </Link>
                                 </li>
-                                {/* <li className='menu_item'>
-                                    <Link to="/tours"> Tour </Link>
-                                </li> */}
                             </div>
                         </div>
 
-
-
-
                         <div className='menu-actions'>
                             <div className='menu-btns d-none d-md-block'>
-                                <Button className='menu-btn' text to={"/login"} leftIcon={<FontAwesomeIcon icon={faRightToBracket} />}>
+                                <Button
+                                    className='menu-btn'
+                                    text
+                                    to={"/login"}
+                                    leftIcon={<FontAwesomeIcon icon={faRightToBracket} />}
+                                >
                                     Đăng nhập
                                 </Button>
-                                <Button className='menu-btn' text to={"/register"} leftIcon={<FontAwesomeIcon icon={faDownload} />}>
+                                <Button
+                                    className='menu-btn'
+                                    text
+                                    to={"/register"}
+                                    leftIcon={<FontAwesomeIcon icon={faDownload} />}
+                                >
                                     Đăng ký
                                 </Button>
                             </div>
-
 
                             <button className="menu-menu d-xl-none" onClick={handleButtonClick}>
                                 <FontAwesomeIcon icon={faBars} />
@@ -79,15 +88,14 @@ function Header() {
                                 <FontAwesomeIcon icon={faGear} />
                             </button>
                         </div>
-
-
                     </div>
                 </div>
             </div>
 
             {isBoxOpen && (
-
                 <div className='menu-mobile-ipad d-xl-none'>
+
+
                     <div className='container'>
 
                         <ul className='main-menu'>
